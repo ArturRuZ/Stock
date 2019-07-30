@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Qr Scanner View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="QrScannerViewController" id="BYZ-38-t0r" customClass="QrScannerViewController" customModule="Stock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwq-Ex-9sl" userLabel="actionView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="1. Scan detail" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-io-0tt">
+                                        <rect key="frame" x="146" y="5" width="122" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="1" green="0.72245967583138726" blue="0.21572556484934813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zgy-io-0tt" firstAttribute="centerY" secondItem="zwq-Ex-9sl" secondAttribute="centerY" id="Yb8-BD-Yfo"/>
+                                    <constraint firstAttribute="height" constant="40" id="iV8-WD-MiI"/>
+                                    <constraint firstItem="Zgy-io-0tt" firstAttribute="centerX" secondItem="zwq-Ex-9sl" secondAttribute="centerX" id="v7q-wc-QcD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGM-gp-rF3" userLabel="cameraView">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VGM-gp-rF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hmn-vP-AUO"/>
+                            <constraint firstItem="VGM-gp-rF3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J9O-Sa-Ni9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VGM-gp-rF3" secondAttribute="bottom" id="Oo0-1i-bhN"/>
+                            <constraint firstItem="zwq-Ex-9sl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RUV-0c-DjB"/>
+                            <constraint firstItem="VGM-gp-rF3" firstAttribute="top" secondItem="zwq-Ex-9sl" secondAttribute="bottom" id="ZLI-cI-lrc"/>
+                            <constraint firstItem="zwq-Ex-9sl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dOw-zf-ScG"/>
+                            <constraint firstItem="zwq-Ex-9sl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rOh-sc-UnO"/>
+                            <constraint firstItem="VGM-gp-rF3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tml-Nm-XC5"/>
+                            <constraint firstItem="zwq-Ex-9sl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vkH-Oe-a35"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionViewLabel" destination="Zgy-io-0tt" id="8G7-Ot-3Ks"/>
+                        <outlet property="cameraView" destination="VGM-gp-rF3" id="VWB-fO-8AE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+</document>

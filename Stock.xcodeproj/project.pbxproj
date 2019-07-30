@@ -7,18 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34677C0722F0A7F1004A7B0F /* ErrorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0322F0A7F1004A7B0F /* ErrorList.swift */; };
+		34677C0822F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0422F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift */; };
+		34677C0922F0A7F1004A7B0F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0522F0A7F1004A7B0F /* Result.swift */; };
+		34677C0A22F0A7F1004A7B0F /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0622F0A7F1004A7B0F /* StoryboardName.swift */; };
+		34677C0D22F0A7FB004A7B0F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0B22F0A7FB004A7B0F /* Coordinator.swift */; };
+		34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0C22F0A7FB004A7B0F /* CoordinatorProtocol.swift */; };
+		34677C1022F0A80A004A7B0F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C0F22F0A80A004A7B0F /* Application.swift */; };
+		34677C1422F0A81C004A7B0F /* ControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1222F0A81C004A7B0F /* ControllerBuilder.swift */; };
+		34677C1522F0A81C004A7B0F /* ControllerBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1322F0A81C004A7B0F /* ControllerBuilderProtocol.swift */; };
+		34677C1722F0A82B004A7B0F /* QrScannerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1622F0A82B004A7B0F /* QrScannerAssembly.swift */; };
+		34677C1922F0A885004A7B0F /* QrScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1822F0A885004A7B0F /* QrScannerViewController.swift */; };
+		34677C1C22F0A9A3004A7B0F /* QrScannerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1B22F0A9A3004A7B0F /* QrScannerViewProtocol.swift */; };
+		34677C1E22F0A9CB004A7B0F /* QrScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */; };
+		34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */; };
+		34677C2222F0AA08004A7B0F /* QrScannerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */; };
+		34677C2422F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */; };
+		34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2522F0AA3B004A7B0F /* StockDetail.swift */; };
+		34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */; };
+		34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2922F0AA59004A7B0F /* StockPlace.swift */; };
+		34677C2C22F0AA65004A7B0F /* StockPlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2B22F0AA65004A7B0F /* StockPlaceProtocol.swift */; };
+		34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2D22F0AA7D004A7B0F /* DataMock.swift */; };
 		348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C400322EEE80900E1AE66 /* AppDelegate.swift */; };
-		348C400622EEE80900E1AE66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C400522EEE80900E1AE66 /* ViewController.swift */; };
-		348C400922EEE80900E1AE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400722EEE80900E1AE66 /* Main.storyboard */; };
+		348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400722EEE80900E1AE66 /* QrScanner.storyboard */; };
 		348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348C400A22EEE80B00E1AE66 /* Assets.xcassets */; };
 		348C400E22EEE80B00E1AE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34677C0322F0A7F1004A7B0F /* ErrorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorList.swift; sourceTree = "<group>"; };
+		34677C0422F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerStoryboardID.swift; sourceTree = "<group>"; };
+		34677C0522F0A7F1004A7B0F /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		34677C0622F0A7F1004A7B0F /* StoryboardName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
+		34677C0B22F0A7FB004A7B0F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		34677C0C22F0A7FB004A7B0F /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		34677C0F22F0A80A004A7B0F /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		34677C1222F0A81C004A7B0F /* ControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerBuilder.swift; sourceTree = "<group>"; };
+		34677C1322F0A81C004A7B0F /* ControllerBuilderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerBuilderProtocol.swift; sourceTree = "<group>"; };
+		34677C1622F0A82B004A7B0F /* QrScannerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrScannerAssembly.swift; sourceTree = "<group>"; };
+		34677C1822F0A885004A7B0F /* QrScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerViewController.swift; sourceTree = "<group>"; };
+		34677C1B22F0A9A3004A7B0F /* QrScannerViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerViewProtocol.swift; sourceTree = "<group>"; };
+		34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenter.swift; sourceTree = "<group>"; };
+		34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDataProvider.swift; sourceTree = "<group>"; };
+		34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDataProviderProtocol.swift; sourceTree = "<group>"; };
+		34677C2522F0AA3B004A7B0F /* StockDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetail.swift; sourceTree = "<group>"; };
+		34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailProcol.swift; sourceTree = "<group>"; };
+		34677C2922F0AA59004A7B0F /* StockPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlace.swift; sourceTree = "<group>"; };
+		34677C2B22F0AA65004A7B0F /* StockPlaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlaceProtocol.swift; sourceTree = "<group>"; };
+		34677C2D22F0AA7D004A7B0F /* DataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMock.swift; sourceTree = "<group>"; };
 		348C400022EEE80800E1AE66 /* Stock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348C400322EEE80900E1AE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		348C400522EEE80900E1AE66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		348C400822EEE80900E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		348C400822EEE80900E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QrScanner.storyboard; sourceTree = "<group>"; };
 		348C400A22EEE80B00E1AE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348C400D22EEE80B00E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		348C400F22EEE80B00E1AE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +75,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34677BFA22F0A6E7004A7B0F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				348C400322EEE80900E1AE66 /* AppDelegate.swift */,
+				34677C0F22F0A80A004A7B0F /* Application.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		34677BFB22F0A6F8004A7B0F /* Cordinator */ = {
+			isa = PBXGroup;
+			children = (
+				34677C0B22F0A7FB004A7B0F /* Coordinator.swift */,
+				34677C0C22F0A7FB004A7B0F /* CoordinatorProtocol.swift */,
+			);
+			path = Cordinator;
+			sourceTree = "<group>";
+		};
+		34677BFC22F0A70B004A7B0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34677C1122F0A81C004A7B0F /* ControllerBuilder */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34677BFD22F0A719004A7B0F /* QrScanner */ = {
+			isa = PBXGroup;
+			children = (
+				34677C0122F0A748004A7B0F /* Assembly */,
+				34677BFE22F0A726004A7B0F /* Model */,
+				34677BFF22F0A72B004A7B0F /* Presenter */,
+				34677C0022F0A734004A7B0F /* View */,
+			);
+			path = QrScanner;
+			sourceTree = "<group>";
+		};
+		34677BFE22F0A726004A7B0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */,
+				34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */,
+				34677C2522F0AA3B004A7B0F /* StockDetail.swift */,
+				34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */,
+				34677C2922F0AA59004A7B0F /* StockPlace.swift */,
+				34677C2B22F0AA65004A7B0F /* StockPlaceProtocol.swift */,
+				34677C2D22F0AA7D004A7B0F /* DataMock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34677BFF22F0A72B004A7B0F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */,
+				34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34677C0022F0A734004A7B0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				348C400722EEE80900E1AE66 /* QrScanner.storyboard */,
+				34677C1822F0A885004A7B0F /* QrScannerViewController.swift */,
+				34677C1B22F0A9A3004A7B0F /* QrScannerViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34677C0122F0A748004A7B0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				34677C1622F0A82B004A7B0F /* QrScannerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		34677C0222F0A752004A7B0F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				34677C0322F0A7F1004A7B0F /* ErrorList.swift */,
+				34677C0522F0A7F1004A7B0F /* Result.swift */,
+				34677C0622F0A7F1004A7B0F /* StoryboardName.swift */,
+				34677C0422F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		34677C1122F0A81C004A7B0F /* ControllerBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				34677C1222F0A81C004A7B0F /* ControllerBuilder.swift */,
+				34677C1322F0A81C004A7B0F /* ControllerBuilderProtocol.swift */,
+			);
+			path = ControllerBuilder;
+			sourceTree = "<group>";
+		};
 		348C3FF722EEE80800E1AE66 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +192,11 @@
 		348C400222EEE80800E1AE66 /* Stock */ = {
 			isa = PBXGroup;
 			children = (
-				348C400322EEE80900E1AE66 /* AppDelegate.swift */,
-				348C400522EEE80900E1AE66 /* ViewController.swift */,
-				348C400722EEE80900E1AE66 /* Main.storyboard */,
+				34677BFA22F0A6E7004A7B0F /* App */,
+				34677BFB22F0A6F8004A7B0F /* Cordinator */,
+				34677C0222F0A752004A7B0F /* Common */,
+				34677BFC22F0A70B004A7B0F /* Services */,
+				34677BFD22F0A719004A7B0F /* QrScanner */,
 				348C400A22EEE80B00E1AE66 /* Assets.xcassets */,
 				348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */,
 				348C400F22EEE80B00E1AE66 /* Info.plist */,
@@ -124,7 +264,7 @@
 			files = (
 				348C400E22EEE80B00E1AE66 /* LaunchScreen.storyboard in Resources */,
 				348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */,
-				348C400922EEE80900E1AE66 /* Main.storyboard in Resources */,
+				348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,20 +275,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348C400622EEE80900E1AE66 /* ViewController.swift in Sources */,
+				34677C2C22F0AA65004A7B0F /* StockPlaceProtocol.swift in Sources */,
+				34677C1C22F0A9A3004A7B0F /* QrScannerViewProtocol.swift in Sources */,
+				34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */,
+				34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */,
+				34677C1022F0A80A004A7B0F /* Application.swift in Sources */,
+				34677C1422F0A81C004A7B0F /* ControllerBuilder.swift in Sources */,
+				34677C0822F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift in Sources */,
+				34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */,
+				34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */,
+				34677C0922F0A7F1004A7B0F /* Result.swift in Sources */,
+				34677C2422F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift in Sources */,
+				34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */,
+				34677C0722F0A7F1004A7B0F /* ErrorList.swift in Sources */,
+				34677C0A22F0A7F1004A7B0F /* StoryboardName.swift in Sources */,
+				34677C1922F0A885004A7B0F /* QrScannerViewController.swift in Sources */,
+				34677C1E22F0A9CB004A7B0F /* QrScannerPresenter.swift in Sources */,
 				348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */,
+				34677C1522F0A81C004A7B0F /* ControllerBuilderProtocol.swift in Sources */,
+				34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */,
+				34677C0D22F0A7FB004A7B0F /* Coordinator.swift in Sources */,
+				34677C1722F0A82B004A7B0F /* QrScannerAssembly.swift in Sources */,
+				34677C2222F0AA08004A7B0F /* QrScannerDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		348C400722EEE80900E1AE66 /* Main.storyboard */ = {
+		348C400722EEE80900E1AE66 /* QrScanner.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				348C400822EEE80900E1AE66 /* Base */,
 			);
-			name = Main.storyboard;
+			name = QrScanner.storyboard;
 			sourceTree = "<group>";
 		};
 		348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */ = {
