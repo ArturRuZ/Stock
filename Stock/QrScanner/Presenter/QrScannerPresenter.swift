@@ -26,7 +26,9 @@ final class  QrScannerPresenter {
 // MARK: - QrScannerViewOutputProtocol Implementation
 
 extension QrScannerPresenter: QrScannerViewOutputProtocol {
-  
+  func qrScanned(code: String) {
+    print (code)
+  }
 }
 
 extension QrScannerPresenter: QrScannerPresenterInputProtocol {

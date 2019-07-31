@@ -35,3 +35,18 @@ extension Coordinator: CoordinatorProtocol {
 
 extension Coordinator: QrScannerPresenterDelegateProtocol {
 }
+
+// MARK: - DetailPlaceAprooverPresenterDelegateProtocol implementation
+
+extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
+}
+
+// MARK: - StockViewerPresenterDelegateProtocol implementation
+
+extension Coordinator: StockViewerPresenterDelegateProtocol {
+}
+
+// MARK: - CommonInfoViewerPresenterDelegateProtocol implementation
+
+extension Coordinator: CommonInfoViewerPresenterDelegateProtocol {
+}

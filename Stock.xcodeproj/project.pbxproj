@@ -28,6 +28,35 @@
 		34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2922F0AA59004A7B0F /* StockPlace.swift */; };
 		34677C2C22F0AA65004A7B0F /* StockPlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2B22F0AA65004A7B0F /* StockPlaceProtocol.swift */; };
 		34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2D22F0AA7D004A7B0F /* DataMock.swift */; };
+		34677C3B22F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3422F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift */; };
+		34677C3C22F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3522F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift */; };
+		34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */; };
+		34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */; };
+		34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */; };
+		34677C4A22F2122A004A7B0F /* StockViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4222F21229004A7B0F /* StockViewerPresenter.swift */; };
+		34677C4B22F2122A004A7B0F /* StockViewerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */; };
+		34677C4C22F2122A004A7B0F /* StockViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4522F21229004A7B0F /* StockViewerViewController.swift */; };
+		34677C4D22F2122A004A7B0F /* StockViewerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */; };
+		34677C4E22F2122A004A7B0F /* StockViewerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4822F21229004A7B0F /* StockViewerAssembly.swift */; };
+		34677C5922F2139C004A7B0F /* CommonInfoViewerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */; };
+		34677C5A22F2139C004A7B0F /* CommonInfoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */; };
+		34677C5B22F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */; };
+		34677C5C22F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */; };
+		34677C5D22F2139C004A7B0F /* CommonInfoViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */; };
+		34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */; };
+		34677C6122F21485004A7B0F /* StockViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6022F21485004A7B0F /* StockViewer.storyboard */; };
+		34677C6322F21494004A7B0F /* CommonInfoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */; };
+		34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */; };
+		34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6722F2164F004A7B0F /* DetailInfoCell.xib */; };
+		34677C6A22F2166E004A7B0F /* AprooveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6922F2166E004A7B0F /* AprooveCell.xib */; };
+		34677C6C22F2168B004A7B0F /* CancelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6B22F2168B004A7B0F /* CancelCell.xib */; };
+		34677C7222F21BA9004A7B0F /* DetailInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7122F21BA9004A7B0F /* DetailInfoCell.swift */; };
+		34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */; };
+		34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */; };
+		34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */; };
+		34677C7B22F2276A004A7B0F /* StockViewerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7A22F2276A004A7B0F /* StockViewerCell.swift */; };
+		34677C7D22F22785004A7B0F /* StockViewerCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */; };
+		34677C8222F22932004A7B0F /* StockViewerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C8122F22932004A7B0F /* StockViewerCell.xib */; };
 		348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C400322EEE80900E1AE66 /* AppDelegate.swift */; };
 		348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400722EEE80900E1AE66 /* QrScanner.storyboard */; };
 		348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348C400A22EEE80B00E1AE66 /* Assets.xcassets */; };
@@ -56,6 +85,35 @@
 		34677C2922F0AA59004A7B0F /* StockPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlace.swift; sourceTree = "<group>"; };
 		34677C2B22F0AA65004A7B0F /* StockPlaceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlaceProtocol.swift; sourceTree = "<group>"; };
 		34677C2D22F0AA7D004A7B0F /* DataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMock.swift; sourceTree = "<group>"; };
+		34677C3422F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverViewProtocol.swift; sourceTree = "<group>"; };
+		34677C3522F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverViewController.swift; sourceTree = "<group>"; };
+		34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverAssembly.swift; sourceTree = "<group>"; };
+		34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenter.swift; sourceTree = "<group>"; };
+		34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C4222F21229004A7B0F /* StockViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerPresenter.swift; sourceTree = "<group>"; };
+		34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C4522F21229004A7B0F /* StockViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerViewController.swift; sourceTree = "<group>"; };
+		34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerViewProtocol.swift; sourceTree = "<group>"; };
+		34677C4822F21229004A7B0F /* StockViewerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerAssembly.swift; sourceTree = "<group>"; };
+		34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerAssembly.swift; sourceTree = "<group>"; };
+		34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerViewController.swift; sourceTree = "<group>"; };
+		34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerViewProtocol.swift; sourceTree = "<group>"; };
+		34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerPresenter.swift; sourceTree = "<group>"; };
+		34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPlaceAproover.storyboard; sourceTree = "<group>"; };
+		34677C6022F21485004A7B0F /* StockViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockViewer.storyboard; sourceTree = "<group>"; };
+		34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonInfoViewer.storyboard; sourceTree = "<group>"; };
+		34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoCell.xib; sourceTree = "<group>"; };
+		34677C6722F2164F004A7B0F /* DetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoCell.xib; sourceTree = "<group>"; };
+		34677C6922F2166E004A7B0F /* AprooveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AprooveCell.xib; sourceTree = "<group>"; };
+		34677C6B22F2168B004A7B0F /* CancelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CancelCell.xib; sourceTree = "<group>"; };
+		34677C7122F21BA9004A7B0F /* DetailInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCell.swift; sourceTree = "<group>"; };
+		34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCellProtocol.swift; sourceTree = "<group>"; };
+		34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
+		34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCellProtocol.swift; sourceTree = "<group>"; };
+		34677C7A22F2276A004A7B0F /* StockViewerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewerCell.swift; sourceTree = "<group>"; };
+		34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewerCellProtocol.swift; sourceTree = "<group>"; };
+		34677C8122F22932004A7B0F /* StockViewerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockViewerCell.xib; sourceTree = "<group>"; };
 		348C400022EEE80800E1AE66 /* Stock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348C400322EEE80900E1AE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348C400822EEE80900E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QrScanner.storyboard; sourceTree = "<group>"; };
@@ -173,6 +231,200 @@
 			path = ControllerBuilder;
 			sourceTree = "<group>";
 		};
+		34677C3122F20FCC004A7B0F /* DetailPlaceAproover */ = {
+			isa = PBXGroup;
+			children = (
+				34677C3622F20FF3004A7B0F /* Assembly */,
+				34677C3222F20FF2004A7B0F /* Model */,
+				34677C3822F20FF3004A7B0F /* Presenter */,
+				34677C3322F20FF3004A7B0F /* View */,
+			);
+			path = DetailPlaceAproover;
+			sourceTree = "<group>";
+		};
+		34677C3222F20FF2004A7B0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34677C3322F20FF3004A7B0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6422F215CF004A7B0F /* Cells */,
+				34677C3422F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift */,
+				34677C3522F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34677C3622F20FF3004A7B0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		34677C3822F20FF3004A7B0F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */,
+				34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34677C4022F2121D004A7B0F /* StockViewer */ = {
+			isa = PBXGroup;
+			children = (
+				34677C4722F21229004A7B0F /* Assembly */,
+				34677C4922F2122A004A7B0F /* Model */,
+				34677C4122F21229004A7B0F /* Presenter */,
+				34677C4422F21229004A7B0F /* View */,
+			);
+			path = StockViewer;
+			sourceTree = "<group>";
+		};
+		34677C4122F21229004A7B0F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34677C4222F21229004A7B0F /* StockViewerPresenter.swift */,
+				34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34677C4422F21229004A7B0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34677C7922F22746004A7B0F /* StockViewerCell */,
+				34677C4522F21229004A7B0F /* StockViewerViewController.swift */,
+				34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */,
+				34677C6022F21485004A7B0F /* StockViewer.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34677C4722F21229004A7B0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				34677C4822F21229004A7B0F /* StockViewerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		34677C4922F2122A004A7B0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34677C4F22F2138A004A7B0F /* CommonInfoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				34677C5022F2139C004A7B0F /* Assembly */,
+				34677C5522F2139C004A7B0F /* Model */,
+				34677C5622F2139C004A7B0F /* Presenter */,
+				34677C5222F2139C004A7B0F /* View */,
+			);
+			path = CommonInfoViewer;
+			sourceTree = "<group>";
+		};
+		34677C5022F2139C004A7B0F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		34677C5222F2139C004A7B0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */,
+				34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */,
+				34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34677C5522F2139C004A7B0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		34677C5622F2139C004A7B0F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */,
+				34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34677C6422F215CF004A7B0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6D22F21694004A7B0F /* DetailInfoCell */,
+				34677C6E22F216A2004A7B0F /* PlaceInfoCell */,
+				34677C6F22F216AF004A7B0F /* AprooveCell */,
+				34677C7022F216B8004A7B0F /* CancelCell */,
+				34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		34677C6D22F21694004A7B0F /* DetailInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6722F2164F004A7B0F /* DetailInfoCell.xib */,
+				34677C7122F21BA9004A7B0F /* DetailInfoCell.swift */,
+				34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */,
+			);
+			path = DetailInfoCell;
+			sourceTree = "<group>";
+		};
+		34677C6E22F216A2004A7B0F /* PlaceInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */,
+				34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */,
+				34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */,
+			);
+			path = PlaceInfoCell;
+			sourceTree = "<group>";
+		};
+		34677C6F22F216AF004A7B0F /* AprooveCell */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6922F2166E004A7B0F /* AprooveCell.xib */,
+			);
+			path = AprooveCell;
+			sourceTree = "<group>";
+		};
+		34677C7022F216B8004A7B0F /* CancelCell */ = {
+			isa = PBXGroup;
+			children = (
+				34677C6B22F2168B004A7B0F /* CancelCell.xib */,
+			);
+			path = CancelCell;
+			sourceTree = "<group>";
+		};
+		34677C7922F22746004A7B0F /* StockViewerCell */ = {
+			isa = PBXGroup;
+			children = (
+				34677C7A22F2276A004A7B0F /* StockViewerCell.swift */,
+				34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */,
+				34677C8122F22932004A7B0F /* StockViewerCell.xib */,
+			);
+			path = StockViewerCell;
+			sourceTree = "<group>";
+		};
 		348C3FF722EEE80800E1AE66 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +449,9 @@
 				34677C0222F0A752004A7B0F /* Common */,
 				34677BFC22F0A70B004A7B0F /* Services */,
 				34677BFD22F0A719004A7B0F /* QrScanner */,
+				34677C3122F20FCC004A7B0F /* DetailPlaceAproover */,
+				34677C4022F2121D004A7B0F /* StockViewer */,
+				34677C4F22F2138A004A7B0F /* CommonInfoViewer */,
 				348C400A22EEE80B00E1AE66 /* Assets.xcassets */,
 				348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */,
 				348C400F22EEE80B00E1AE66 /* Info.plist */,
@@ -264,7 +519,15 @@
 			files = (
 				348C400E22EEE80B00E1AE66 /* LaunchScreen.storyboard in Resources */,
 				348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */,
+				34677C6122F21485004A7B0F /* StockViewer.storyboard in Resources */,
+				34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */,
+				34677C6322F21494004A7B0F /* CommonInfoViewer.storyboard in Resources */,
+				34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */,
 				348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */,
+				34677C8222F22932004A7B0F /* StockViewerCell.xib in Resources */,
+				34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */,
+				34677C6A22F2166E004A7B0F /* AprooveCell.xib in Resources */,
+				34677C6C22F2168B004A7B0F /* CancelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,22 +541,43 @@
 				34677C2C22F0AA65004A7B0F /* StockPlaceProtocol.swift in Sources */,
 				34677C1C22F0A9A3004A7B0F /* QrScannerViewProtocol.swift in Sources */,
 				34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */,
+				34677C5B22F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift in Sources */,
 				34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */,
+				34677C4C22F2122A004A7B0F /* StockViewerViewController.swift in Sources */,
 				34677C1022F0A80A004A7B0F /* Application.swift in Sources */,
+				34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */,
+				34677C4B22F2122A004A7B0F /* StockViewerPresenterProtocol.swift in Sources */,
+				34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */,
+				34677C4A22F2122A004A7B0F /* StockViewerPresenter.swift in Sources */,
+				34677C5A22F2139C004A7B0F /* CommonInfoViewerViewController.swift in Sources */,
 				34677C1422F0A81C004A7B0F /* ControllerBuilder.swift in Sources */,
+				34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */,
+				34677C7D22F22785004A7B0F /* StockViewerCellProtocol.swift in Sources */,
+				34677C7B22F2276A004A7B0F /* StockViewerCell.swift in Sources */,
 				34677C0822F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift in Sources */,
+				34677C7222F21BA9004A7B0F /* DetailInfoCell.swift in Sources */,
+				34677C5922F2139C004A7B0F /* CommonInfoViewerAssembly.swift in Sources */,
 				34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */,
 				34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */,
 				34677C0922F0A7F1004A7B0F /* Result.swift in Sources */,
 				34677C2422F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift in Sources */,
 				34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */,
+				34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */,
+				34677C4E22F2122A004A7B0F /* StockViewerAssembly.swift in Sources */,
+				34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */,
 				34677C0722F0A7F1004A7B0F /* ErrorList.swift in Sources */,
 				34677C0A22F0A7F1004A7B0F /* StoryboardName.swift in Sources */,
 				34677C1922F0A885004A7B0F /* QrScannerViewController.swift in Sources */,
 				34677C1E22F0A9CB004A7B0F /* QrScannerPresenter.swift in Sources */,
 				348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */,
 				34677C1522F0A81C004A7B0F /* ControllerBuilderProtocol.swift in Sources */,
+				34677C3B22F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift in Sources */,
 				34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */,
+				34677C4D22F2122A004A7B0F /* StockViewerViewProtocol.swift in Sources */,
+				34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */,
+				34677C5D22F2139C004A7B0F /* CommonInfoViewerPresenter.swift in Sources */,
+				34677C5C22F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift in Sources */,
+				34677C3C22F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift in Sources */,
 				34677C0D22F0A7FB004A7B0F /* Coordinator.swift in Sources */,
 				34677C1722F0A82B004A7B0F /* QrScannerAssembly.swift in Sources */,
 				34677C2222F0AA08004A7B0F /* QrScannerDataProvider.swift in Sources */,

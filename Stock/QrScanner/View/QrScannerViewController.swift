@@ -20,35 +20,33 @@ final class QrScannerViewController: UIViewController {
   
   private var viewOutput: QrScannerViewOutputProtocol!
   private var captureSession: AVCaptureSession?
-  private var detailIsScanned = false
-  private var placeIsScanned = false
+  private let sessionQueue = DispatchQueue(label: "session queue")
   
   
   // MARK: - BuildInMethods
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupInputOutput()
+    setupCaptureSession()
     setupPreview()
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    startScan()
+    sessionQueue.async {
+      self.captureSession?.startRunning()
+    }
   }
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    stopScan()
+   captureSession?.stopRunning()
   }
   override var prefersStatusBarHidden: Bool {
-    return false
+    return true
   }
-  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    return .portrait
-  }
-  
+
   // MARK: - SetupQrScanner confegure private methods
   
-  private func setupInputOutput() {
+  private func setupCaptureSession() {
     let session = AVCaptureSession()
     guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
     let videoInput: AVCaptureDeviceInput
@@ -82,20 +80,7 @@ final class QrScannerViewController: UIViewController {
     capturePreviewLayer.videoGravity = .resizeAspectFill
     cameraView.layer.addSublayer(capturePreviewLayer)
   }
-  private func startScan() {
-    if (captureSession?.isRunning == false) {
-      !detailIsScanned ? (actionViewLabel.text = "Сканирование детали") : (actionViewLabel.text = "Сканирование места хранения")
-      captureSession?.startRunning()
-    }
-  }
-  private func stopScan() {
-    if (captureSession?.isRunning == true) {
-      captureSession?.stopRunning()
-      placeIsScanned = false
-      placeIsScanned = false
-    }
-  }
-  
+
   // MARK: - Failed scan private methods
   
   private func failedConfegureCamera() {
@@ -105,35 +90,17 @@ final class QrScannerViewController: UIViewController {
     present(failedConfegure, animated: true)
     captureSession = nil
   }
-  
-  // MARK: - Succsses scan private methods
-  
-  private func qrScanned(code: String) {
-    if !detailIsScanned {
-      print(code)
-      detailIsScanned = true
-      startScan()
-    }
-    if placeIsScanned {
-      print(code)
-      placeIsScanned = true
-      stopScan()
-    }
-  }
 }
 
 // MARK: - AVCaptureMetadataOutputObjectsDelegate Implementatio
 
 extension QrScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
   func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-    captureSession?.stopRunning()
     if let metadataObject = metadataObjects.first {
       guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
       guard let stringValue = readableObject.stringValue else { return }
-      AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-      qrScanned(code: stringValue)
+        self.viewOutput.qrScanned(code: stringValue)
     }
-    dismiss(animated: true)
   }
 }
 

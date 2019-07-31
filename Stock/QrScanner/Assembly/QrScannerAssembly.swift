@@ -1,5 +1,5 @@
 //
-//  StockAssembly.swift
+//  DetailPlaceAprooverAssembly.swift
 //  Stock
 //
 //  Created by Артур on 30/07/2019.

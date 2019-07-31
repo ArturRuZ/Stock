@@ -28,8 +28,12 @@ final class ControllerBuilder {
     guard let qrScannerModule = assembly.build(delegate: delegate) else { return UIViewController() }
     return qrScannerModule.controller
   }
-
-
+  private func buildStockViewerController() -> UIViewController {
+    let assembly = StockViewerAssembly()
+    guard let delegate = self.coordinator as? StockViewerPresenterDelegateProtocol else { return UIViewController() }
+    guard let stockViewerModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    return stockViewerModule.controller
+  }
 }
 
 // MARK: - ControllerBuilderProtocol implementation
@@ -51,5 +55,11 @@ extension ControllerBuilder: ControllerBuilderProtocol {
     tabBarController.setViewControllers([qrScannerController], animated: false)
     tabBarController.selectedIndex = 0
     return tabBarController
+  }
+  func buildDetailPlaceAprooverController() -> UIViewController {
+    let assembly = DetailPlaceAprooverAssembly()
+    guard let delegate = self.coordinator as? DetailPlaceAprooverPresenterDelegateProtocol else { return UIViewController() }
+    guard let detailPlaceAprooverModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    return detailPlaceAprooverModule.controller
   }
 }
