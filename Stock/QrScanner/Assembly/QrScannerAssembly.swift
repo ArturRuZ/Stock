@@ -9,9 +9,8 @@
 import UIKit
 
 final class QrScannerAssembly {
-  func build(delegate: QrScannerPresenterDelegateProtocol) -> (controller: UIViewController, presenter: QrScannerPresenterInputProtocol)? {
+  func build(dataProvider: DataProviderReaderProtocol, delegate: QrScannerPresenterDelegateProtocol) -> (controller: UIViewController, presenter: QrScannerPresenterInputProtocol)? {
     guard let viewController = QrScannerViewController.instantiateFromStoryboard(with: .qrScanner) else { return nil }
-    let dataProvider = QrScannerDataProvider()
     let presenter = QrScannerPresenter(dataProvider: dataProvider)
     viewController.output = presenter
     presenter.output = viewController

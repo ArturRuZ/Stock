@@ -21,8 +21,8 @@
 		34677C1C22F0A9A3004A7B0F /* QrScannerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1B22F0A9A3004A7B0F /* QrScannerViewProtocol.swift */; };
 		34677C1E22F0A9CB004A7B0F /* QrScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */; };
 		34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */; };
-		34677C2222F0AA08004A7B0F /* QrScannerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */; };
-		34677C2422F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */; };
+		34677C2222F0AA08004A7B0F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2122F0AA08004A7B0F /* DataProvider.swift */; };
+		34677C2422F0AA1A004A7B0F /* DataProviderReaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */; };
 		34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2522F0AA3B004A7B0F /* StockDetail.swift */; };
 		34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */; };
 		34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2922F0AA59004A7B0F /* StockPlace.swift */; };
@@ -78,8 +78,8 @@
 		34677C1B22F0A9A3004A7B0F /* QrScannerViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerViewProtocol.swift; sourceTree = "<group>"; };
 		34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenter.swift; sourceTree = "<group>"; };
 		34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDataProvider.swift; sourceTree = "<group>"; };
-		34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDataProviderProtocol.swift; sourceTree = "<group>"; };
+		34677C2122F0AA08004A7B0F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderReaderProtocol.swift; sourceTree = "<group>"; };
 		34677C2522F0AA3B004A7B0F /* StockDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetail.swift; sourceTree = "<group>"; };
 		34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailProcol.swift; sourceTree = "<group>"; };
 		34677C2922F0AA59004A7B0F /* StockPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlace.swift; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 		34677BFC22F0A70B004A7B0F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				346A76DE22F370DF0077D8FB /* DataProvider */,
 				34677C1122F0A81C004A7B0F /* ControllerBuilder */,
 			);
 			path = Services;
@@ -173,8 +174,6 @@
 		34677BFE22F0A726004A7B0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				34677C2122F0AA08004A7B0F /* QrScannerDataProvider.swift */,
-				34677C2322F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift */,
 				34677C2522F0AA3B004A7B0F /* StockDetail.swift */,
 				34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */,
 				34677C2922F0AA59004A7B0F /* StockPlace.swift */,
@@ -425,6 +424,15 @@
 			path = StockViewerCell;
 			sourceTree = "<group>";
 		};
+		346A76DE22F370DF0077D8FB /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				34677C2122F0AA08004A7B0F /* DataProvider.swift */,
+				34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
 		348C3FF722EEE80800E1AE66 = {
 			isa = PBXGroup;
 			children = (
@@ -560,7 +568,7 @@
 				34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */,
 				34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */,
 				34677C0922F0A7F1004A7B0F /* Result.swift in Sources */,
-				34677C2422F0AA1A004A7B0F /* QrScannerDataProviderProtocol.swift in Sources */,
+				34677C2422F0AA1A004A7B0F /* DataProviderReaderProtocol.swift in Sources */,
 				34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */,
 				34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */,
 				34677C4E22F2122A004A7B0F /* StockViewerAssembly.swift in Sources */,
@@ -580,7 +588,7 @@
 				34677C3C22F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift in Sources */,
 				34677C0D22F0A7FB004A7B0F /* Coordinator.swift in Sources */,
 				34677C1722F0A82B004A7B0F /* QrScannerAssembly.swift in Sources */,
-				34677C2222F0AA08004A7B0F /* QrScannerDataProvider.swift in Sources */,
+				34677C2222F0AA08004A7B0F /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

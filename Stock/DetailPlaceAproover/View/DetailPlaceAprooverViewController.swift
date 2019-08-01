@@ -27,6 +27,8 @@ final class DetailPlaceAprooverViewController: UIViewController {
   private let kAprooveCellIdentifier = "AprooveCellIdentifier"
   private let kCancelCellNib = UINib(nibName: "CancelCell", bundle: nil)
   private let kCancelCellIdentifier = "CancelCellIdentifier"
+  private var currentDetail: StockDetail?
+  private var currentPlace: StockPlace?
   
   // MARK: - BuildInMethods
   
@@ -42,9 +44,11 @@ final class DetailPlaceAprooverViewController: UIViewController {
     infoTableView.register(kDetailInfoCellNib, forCellReuseIdentifier: kDetailInfoCellIdentifier)
     infoTableView.register(kPlaceInfoCellNib, forCellReuseIdentifier: kPlaceInfoCellIdentifier)
     infoTableView.rowHeight = UITableView.automaticDimension
-    infoTableView.estimatedRowHeight = 80
+    infoTableView.estimatedRowHeight = 200
     infoTableView.dataSource = self
     infoTableView.delegate = self
+    infoTableView.isScrollEnabled = false
+    infoTableView.tableFooterView = UIView(frame: CGRect.zero)
   }
   private func setupAprooveTableView() {
     aprooveTableView.register(kAprooveCellNib, forCellReuseIdentifier: kAprooveCellIdentifier)
@@ -53,6 +57,8 @@ final class DetailPlaceAprooverViewController: UIViewController {
     aprooveTableView.estimatedRowHeight = 80
     aprooveTableView.dataSource = self
     aprooveTableView.delegate = self
+    aprooveTableView.isScrollEnabled = false
+    aprooveTableView.tableFooterView = UIView(frame: CGRect.zero)
   }
 }
 
@@ -66,6 +72,10 @@ extension DetailPlaceAprooverViewController: DetailPlaceAprooverViewInputProtoco
     set {
       self.viewOutput = newValue
     }
+  }
+  
+  func show(detail: StockDetail, place: StockPlace) {
+    
   }
 }
 
@@ -81,9 +91,32 @@ extension DetailPlaceAprooverViewController: UITableViewDelegate {
 
 extension DetailPlaceAprooverViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 2
+    return 3
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    switch tableView {
+      
+      // MARK: - Confegure aprooveTableView:
+      
+    case aprooveTableView:
+      if indexPath.row == 0 { return aprooveTableView.dequeueReusableCell(withIdentifier: kAprooveCellIdentifier, for: indexPath) }
+      if indexPath.row == 1 { return aprooveTableView.dequeueReusableCell(withIdentifier: kCancelCellIdentifier, for: indexPath) }
+    case infoTableView:
+      if indexPath.row == 0 { guard let cell = infoTableView.dequeueReusableCell(withIdentifier: kDetailInfoCellIdentifier,
+                                                                                 for: indexPath) as? DetailInfoCellView else {
+                                                                                  return UITableViewCell()}
+        return cell
+      }
+      if indexPath.row == 1 { guard let cell = infoTableView.dequeueReusableCell(withIdentifier: kPlaceInfoCellIdentifier,
+                                                                                 for: indexPath) as? PlaceInfoCellView else {
+                                                                                  return UITableViewCell()}
+        return cell
+      }
+      
+    default:
+      break
+    }
     return UITableViewCell()
   }
 }
+

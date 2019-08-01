@@ -14,12 +14,23 @@ final class  DetailPlaceAprooverPresenter {
   
   private var presenterOutput: DetailPlaceAprooverViewInputProtocol!
   private var presenterDelegate: DetailPlaceAprooverPresenterDelegateProtocol!
+  private var dataProvider: DataProviderSaverProtocol
+  private var currentDetail: StockDetail?
+  private var currentPlace: StockPlace?
+  
+    // MARK: - Initialization
+  
+  init (dataProvider: DataProviderSaverProtocol) {
+    self.dataProvider = dataProvider
+  }
 }
 
 // MARK: - DetailPlaceAprooverViewOutputProtocol Implementation
 
 extension DetailPlaceAprooverPresenter: DetailPlaceAprooverViewOutputProtocol {
-  
+  func viewDidLoad() {
+    
+  }
 }
 
 extension DetailPlaceAprooverPresenter: DetailPlaceAprooverPresenterInputProtocol {
@@ -40,6 +51,8 @@ extension DetailPlaceAprooverPresenter: DetailPlaceAprooverPresenterInputProtoco
       self.presenterOutput = newValue
     }
   }
-  
-
+  func preparToShow(detail: StockDetail, place: StockPlace) {
+    currentDetail = detail
+    currentPlace = place
+  }
 }

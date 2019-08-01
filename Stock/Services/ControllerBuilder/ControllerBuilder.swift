@@ -13,7 +13,7 @@ final class ControllerBuilder {
   // MARK: - Properties
   
   private weak var coordinator: CoordinatorProtocol!
-
+  private let dataProvider = DataProvider()
   // MARK: - Initialization
   
   init() {
@@ -24,13 +24,14 @@ final class ControllerBuilder {
   
   private func createQrScannerController() -> UIViewController {
     let assembly = QrScannerAssembly()
-    guard let delegate = self.coordinator as? QrScannerPresenterDelegateProtocol else { return UIViewController() }
-    guard let qrScannerModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    guard let delegate = coordinator as? QrScannerPresenterDelegateProtocol else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderReaderProtocol else { return UIViewController() }
+    guard let qrScannerModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     return qrScannerModule.controller
   }
   private func buildStockViewerController() -> UIViewController {
     let assembly = StockViewerAssembly()
-    guard let delegate = self.coordinator as? StockViewerPresenterDelegateProtocol else { return UIViewController() }
+    guard let delegate = coordinator as? StockViewerPresenterDelegateProtocol else { return UIViewController() }
     guard let stockViewerModule = assembly.build(delegate: delegate) else { return UIViewController() }
     return stockViewerModule.controller
   }
@@ -56,10 +57,12 @@ extension ControllerBuilder: ControllerBuilderProtocol {
     tabBarController.selectedIndex = 0
     return tabBarController
   }
-  func buildDetailPlaceAprooverController() -> UIViewController {
+  func buildDetailPlaceAprooverController(detail: StockDetail, place: StockPlace) -> UIViewController {
     let assembly = DetailPlaceAprooverAssembly()
     guard let delegate = self.coordinator as? DetailPlaceAprooverPresenterDelegateProtocol else { return UIViewController() }
-    guard let detailPlaceAprooverModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderSaverProtocol else { return UIViewController() }
+    guard let detailPlaceAprooverModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
+    detailPlaceAprooverModule.presenter.preparToShow(detail: detail, place: place)
     return detailPlaceAprooverModule.controller
   }
 }

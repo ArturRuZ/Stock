@@ -15,6 +15,7 @@ final class QrScannerViewController: UIViewController {
   
   @IBOutlet weak var actionViewLabel: UITextField!
   @IBOutlet weak var cameraView: UIView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   // MARK: - Properties
   
@@ -29,6 +30,7 @@ final class QrScannerViewController: UIViewController {
     super.viewDidLoad()
     setupCaptureSession()
     setupPreview()
+    viewOutput.viewDidLoad()
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -114,5 +116,19 @@ extension QrScannerViewController: QrScannerViewInputProtocol {
     set {
       self.viewOutput = newValue
     }
+  }
+  func changeActionViewLabel(text: String, indicatorAnimate: Bool) {
+    actionViewLabel.text = text
+    indicatorAnimate ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+  }
+  func playSound() {
+   AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+  }
+  func showAlert(text: String) {
+    let alertController = UIAlertController(title: "Ошибка", message: "\(text)", preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "Сканировать еще раз", style: .cancel, handler: { _ in
+      self.viewOutput.alertButtonPressed()
+    }))
+     self.present(alertController, animated: true)
   }
 }

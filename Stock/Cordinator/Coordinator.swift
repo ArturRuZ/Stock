@@ -34,6 +34,12 @@ extension Coordinator: CoordinatorProtocol {
 // MARK: - QrScannerPresenterDelegateProtocol implementation
 
 extension Coordinator: QrScannerPresenterDelegateProtocol {
+  func showDetailPlaceAproover(detail: StockDetail, place: StockPlace) {
+    guard let rootTabBarController = rootController as? UITabBarController else { return }
+    guard let qrScannerController = rootTabBarController.viewControllers?.first as? QrScannerViewController else { return }
+    let detailPlaceAprooverController = controllerBuilder.buildDetailPlaceAprooverController(detail: detail, place: place)
+    qrScannerController.present(detailPlaceAprooverController, animated: true)
+  }
 }
 
 // MARK: - DetailPlaceAprooverPresenterDelegateProtocol implementation

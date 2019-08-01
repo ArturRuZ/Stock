@@ -9,9 +9,9 @@
 import UIKit
 
 final class DetailPlaceAprooverAssembly {
-  func build(delegate: DetailPlaceAprooverPresenterDelegateProtocol) -> (controller: UIViewController, presenter: DetailPlaceAprooverPresenterInputProtocol)? {
+  func build(dataProvider: DataProviderSaverProtocol, delegate: DetailPlaceAprooverPresenterDelegateProtocol) -> (controller: UIViewController, presenter: DetailPlaceAprooverPresenterInputProtocol)? {
     guard let viewController = DetailPlaceAprooverViewController.instantiateFromStoryboard(with: .detailPlaceAproover) else { return nil }
-    let presenter = DetailPlaceAprooverPresenter()
+    let presenter = DetailPlaceAprooverPresenter(dataProvider: dataProvider)
     viewController.output = presenter
     presenter.output = viewController
     presenter.delegate = delegate
