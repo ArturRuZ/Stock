@@ -1,5 +1,5 @@
 //
-//  StockViewerCellProtocol.swift
+//  StockListCellProtocol.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol StockViewerCellProtocol: class {
+protocol StockListCellProtocol {
   var title: String {get}
 }

@@ -12,17 +12,17 @@ final class  QrScannerPresenter: NSObject {
   
   // MARK: - Properties
   
-  private var presenterOutput: QrScannerViewInputProtocol!
-  private var presenterDelegate: QrScannerPresenterDelegateProtocol!
-  private var dataProvider: DataProviderReaderProtocol
+  private weak var presenterOutput: QrScannerViewInputProtocol!
+  private weak var presenterDelegate: QrScannerPresenterDelegateProtocol!
+  private var dataProvider: DataProviderSingleReaderProtocol
   @objc private dynamic var currentState: QrScannerState
   private var previousState: QrScannerState?
   private var stateObserver: NSKeyValueObservation?
-  private var currentDetail: StockDetail?
+  private var currentDetail: StockDetailProtocol?
   
   // MARK: - Initialization
   
-  init (dataProvider: DataProviderReaderProtocol) {
+  init (dataProvider: DataProviderSingleReaderProtocol) {
     self.dataProvider = dataProvider
     self.currentState = .paused
     super.init()
@@ -96,7 +96,7 @@ extension QrScannerPresenter: QrScannerViewOutputProtocol {
           DispatchQueue.main.async {
             guard let detail = self.currentDetail else { return }
             self.delegate.showDetailPlaceAproover(detail: detail, place: place)
-            self.previousState = .scanningDetail
+            self.currentState = .scanningDetail
           }
         }
       }

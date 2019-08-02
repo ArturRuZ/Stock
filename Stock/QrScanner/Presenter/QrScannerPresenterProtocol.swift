@@ -19,5 +19,5 @@ protocol QrScannerPresenterInputProtocol: class {
   var output: QrScannerViewInputProtocol {get set}
 }
 protocol QrScannerPresenterDelegateProtocol: class {
-  func showDetailPlaceAproover(detail: StockDetail, place: StockPlace)
+  func showDetailPlaceAproover(detail: StockDetailProtocol, place: StockPlaceProtocol)
 }

@@ -27,8 +27,8 @@ final class DetailPlaceAprooverViewController: UIViewController {
   private let kAprooveCellIdentifier = "AprooveCellIdentifier"
   private let kCancelCellNib = UINib(nibName: "CancelCell", bundle: nil)
   private let kCancelCellIdentifier = "CancelCellIdentifier"
-  private var currentDetail: StockDetail?
-  private var currentPlace: StockPlace?
+  private var currentDetail: StockDetailProtocol?
+  private var currentPlace: StockPlaceProtocol?
   
   // MARK: - BuildInMethods
   
@@ -36,6 +36,11 @@ final class DetailPlaceAprooverViewController: UIViewController {
     super.viewDidLoad()
     setupInfoTableView()
     setupAprooveTableView()
+    viewOutput.viewDidLoad()
+  }
+  
+  deinit {
+    print ("DEINIT")
   }
   
   // MARK: - Private methods
@@ -44,21 +49,23 @@ final class DetailPlaceAprooverViewController: UIViewController {
     infoTableView.register(kDetailInfoCellNib, forCellReuseIdentifier: kDetailInfoCellIdentifier)
     infoTableView.register(kPlaceInfoCellNib, forCellReuseIdentifier: kPlaceInfoCellIdentifier)
     infoTableView.rowHeight = UITableView.automaticDimension
-    infoTableView.estimatedRowHeight = 200
+    infoTableView.estimatedRowHeight = 40
     infoTableView.dataSource = self
     infoTableView.delegate = self
     infoTableView.isScrollEnabled = false
-    infoTableView.tableFooterView = UIView(frame: CGRect.zero)
+    infoTableView.allowsSelection = false
+    infoTableView.tableFooterView =  UIView(frame: CGRect.zero)
+  
   }
   private func setupAprooveTableView() {
     aprooveTableView.register(kAprooveCellNib, forCellReuseIdentifier: kAprooveCellIdentifier)
     aprooveTableView.register(kCancelCellNib, forCellReuseIdentifier: kCancelCellIdentifier)
     aprooveTableView.rowHeight = UITableView.automaticDimension
-    aprooveTableView.estimatedRowHeight = 80
+    aprooveTableView.estimatedRowHeight = 40
     aprooveTableView.dataSource = self
     aprooveTableView.delegate = self
     aprooveTableView.isScrollEnabled = false
-    aprooveTableView.tableFooterView = UIView(frame: CGRect.zero)
+    aprooveTableView.tableFooterView =  UIView(frame: CGRect.zero)
   }
 }
 
@@ -74,8 +81,10 @@ extension DetailPlaceAprooverViewController: DetailPlaceAprooverViewInputProtoco
     }
   }
   
-  func show(detail: StockDetail, place: StockPlace) {
-    
+  func show(detail: StockDetailProtocol, place: StockPlaceProtocol) {
+    currentDetail = detail
+    currentPlace = place
+    infoTableView.reloadData()
   }
 }
 
@@ -84,6 +93,14 @@ extension DetailPlaceAprooverViewController: DetailPlaceAprooverViewInputProtoco
 extension DetailPlaceAprooverViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    switch indexPath.row {
+    case 0:
+      viewOutput.aprooveCellPressed()
+    case 1:
+      viewOutput.cancelCellPressed()
+    default:
+      break
+    }
   }
 }
 
@@ -91,7 +108,7 @@ extension DetailPlaceAprooverViewController: UITableViewDelegate {
 
 extension DetailPlaceAprooverViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return 2
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch tableView {
@@ -101,18 +118,26 @@ extension DetailPlaceAprooverViewController: UITableViewDataSource {
     case aprooveTableView:
       if indexPath.row == 0 { return aprooveTableView.dequeueReusableCell(withIdentifier: kAprooveCellIdentifier, for: indexPath) }
       if indexPath.row == 1 { return aprooveTableView.dequeueReusableCell(withIdentifier: kCancelCellIdentifier, for: indexPath) }
+   
+     // MARK: - Confegure infoTableView:
+    
     case infoTableView:
       if indexPath.row == 0 { guard let cell = infoTableView.dequeueReusableCell(withIdentifier: kDetailInfoCellIdentifier,
                                                                                  for: indexPath) as? DetailInfoCellView else {
                                                                                   return UITableViewCell()}
+        guard let detailCellModel = currentDetail as? DetailInfoCellProtocol else {
+          return  UITableViewCell()}
+        cell.detailInfoCellModel = detailCellModel
         return cell
       }
       if indexPath.row == 1 { guard let cell = infoTableView.dequeueReusableCell(withIdentifier: kPlaceInfoCellIdentifier,
                                                                                  for: indexPath) as? PlaceInfoCellView else {
-                                                                                  return UITableViewCell()}
+                                                                          return UITableViewCell()}
+        guard let placeInfoCellModel = currentPlace  as? PlaceInfoCellProtocol else {
+          return  UITableViewCell()}
+         cell.placeInfoCellModel = placeInfoCellModel
         return cell
       }
-      
     default:
       break
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PlaceInfoCellProtocol: class {
+protocol PlaceInfoCellProtocol {
   var title: String {get}
   var horizontalPosition: Int {get}
   var verticalPosition: Int {get}

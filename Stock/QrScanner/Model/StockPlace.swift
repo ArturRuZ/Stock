@@ -1,5 +1,5 @@
 //
-//  StockPlace.swift
+//  StockPlaceProtocol.swift
 //  Stock
 //
 //  Created by Артур on 30/07/2019.
@@ -13,4 +13,9 @@ struct StockPlace: StockPlaceProtocol  {
   var title: String
   var horizontalPosition: Int
   var verticalPosition: Int
+}
+
+extension StockPlace: PlaceInfoCellProtocol {
+}
+extension StockPlace: StockListCellProtocol {
 }

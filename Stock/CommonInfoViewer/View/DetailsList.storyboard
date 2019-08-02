@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Common Info Viewer View Controller-->
+        <!--Details List View Controller-->
         <scene sceneID="3v6-Gd-cqV">
             <objects>
-                <viewController storyboardIdentifier="CommonInfoViewerViewController" id="uph-ED-y93" customClass="CommonInfoViewerViewController" customModule="Stock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsListViewController" id="uph-ED-y93" customClass="DetailsListViewController" customModule="Stock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xge-jA-OZg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dss-Cb-LTK"/>
                     </view>
+                    <connections>
+                        <outlet property="detailsListTableView" destination="Pez-Mv-BKh" id="6ES-br-3RS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X28-Vv-MpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

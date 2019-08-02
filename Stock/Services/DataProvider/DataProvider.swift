@@ -13,23 +13,41 @@ final class DataProvider {
   
 }
 
-// MARK: - DataProviderReaderProtocol implementation
+// MARK: - DataProviderSingleReaderProtocol implementation
 
-extension DataProvider: DataProviderReaderProtocol {
-  func getDetail(by id: String) -> StockDetail? {
-    guard let detail =  data.detailList.first(where: {$0.id == id}) else { return nil }
+extension DataProvider: DataProviderSingleReaderProtocol {
+  func getDetail(by id: String) -> StockDetailProtocol? {
+    guard let detail =  data.detailList.first(where: {$0.id == id}) as? StockDetailProtocol else { return nil }
     return detail
   }
-  func getStockPlace(by id: String) -> StockPlace? {
-    guard let stockPlace =  data.stockPlaceList.first(where: {$0.id == id}) else { return nil }
-    return stockPlace
-  }
-  func getStockPlaceList() -> [StockPlace] {
+  func getStockPlaceList() -> [StockPlaceProtocol] {
     return data.stockPlaceList
   }
-  func getDetails(by stockPlaceId: String) -> [StockDetail] {
+}
+
+// MARK: - DataProviderSaverProtocol implementation
+
+extension DataProvider: DataProviderSaverProtocol {
+  func save(detail: StockDetailProtocol, place: StockPlaceProtocol) {
+    data.stockDictionary.updateValue(place.id, forKey: detail.id)
+  }
+}
+
+// MARK: - DataProviderStockPlaceListReaderProtocol implementation
+
+extension DataProvider: DataProviderStockPlaceListReaderProtocol {
+  func getStockPlace(by id: String) -> StockPlaceProtocol? {
+    guard let StockPlaceProtocol =  data.stockPlaceList.first(where: {$0.id == id}) else { return nil }
+    return StockPlaceProtocol
+  }
+}
+
+// MARK: - DataProviderDetailsListReaderProtocol implementation
+
+extension DataProvider: DataProviderDetailsListReaderProtocol {
+  func getDetails(for stockPlaceId: String) -> [StockDetailProtocol] {
     var detailIdArray = [String]()
-    var detailsArray = [StockDetail]()
+    var detailsArray = [StockDetailProtocol]()
     for (detailId, placeId) in data.stockDictionary {
       if placeId == stockPlaceId {
         detailIdArray.append(detailId)
@@ -41,13 +59,5 @@ extension DataProvider: DataProviderReaderProtocol {
       })
     }
     return detailsArray
-  }
-}
-
-// MARK: - DataProviderSaverProtocol implementation
-
-extension DataProvider: DataProviderSaverProtocol {
-  func save(detail: StockDetail, place: StockPlace) {
-    data.stockDictionary.updateValue(place.id, forKey: detail.id)
   }
 }

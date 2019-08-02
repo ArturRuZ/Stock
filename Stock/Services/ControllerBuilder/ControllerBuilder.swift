@@ -25,16 +25,19 @@ final class ControllerBuilder {
   private func createQrScannerController() -> UIViewController {
     let assembly = QrScannerAssembly()
     guard let delegate = coordinator as? QrScannerPresenterDelegateProtocol else { return UIViewController() }
-    guard let dataProvider = dataProvider as? DataProviderReaderProtocol else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderSingleReaderProtocol else { return UIViewController() }
     guard let qrScannerModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     return qrScannerModule.controller
   }
-  private func buildStockViewerController() -> UIViewController {
-    let assembly = StockViewerAssembly()
-    guard let delegate = coordinator as? StockViewerPresenterDelegateProtocol else { return UIViewController() }
-    guard let stockViewerModule = assembly.build(delegate: delegate) else { return UIViewController() }
-    return stockViewerModule.controller
+  private func createStockListController() -> UIViewController {
+    let assembly = StockListAssembly()
+    guard let delegate = coordinator as? StockListPresenterDelegateProtocol else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderStockPlaceListReaderProtocol else { return UIViewController() }
+    guard let StockListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
+    StockListModule.controller.navigationItem.title = "Cклады"
+    return StockListModule.controller
   }
+ 
 }
 
 // MARK: - ControllerBuilderProtocol implementation
@@ -51,18 +54,31 @@ extension ControllerBuilder: ControllerBuilderProtocol {
  
   func buildRootController() -> UIViewController {
     let tabBarController = UITabBarController()
-    let qrScannerController = self.createQrScannerController()
+    let qrScannerController = createQrScannerController()
     qrScannerController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "camera_36pt_1x.png"), tag: 0)
-    tabBarController.setViewControllers([qrScannerController], animated: false)
+    let stockListController = createStockListController()
+    stockListController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "list_36pt_1x.png"), tag: 1)
+    tabBarController.setViewControllers([qrScannerController, stockListController], animated: false)
+    tabBarController.tabBar.tintColor = .orange
+    tabBarController.tabBar.barTintColor = .black
     tabBarController.selectedIndex = 0
     return tabBarController
   }
-  func buildDetailPlaceAprooverController(detail: StockDetail, place: StockPlace) -> UIViewController {
+  func buildDetailPlaceAprooverController(detail: StockDetailProtocol, place: StockPlaceProtocol) -> UIViewController {
     let assembly = DetailPlaceAprooverAssembly()
     guard let delegate = self.coordinator as? DetailPlaceAprooverPresenterDelegateProtocol else { return UIViewController() }
     guard let dataProvider = dataProvider as? DataProviderSaverProtocol else { return UIViewController() }
     guard let detailPlaceAprooverModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
-    detailPlaceAprooverModule.presenter.preparToShow(detail: detail, place: place)
+    detailPlaceAprooverModule.presenter.prepareToShow(detail: detail, place: place)
     return detailPlaceAprooverModule.controller
   }
+  func buildDetailsListController(for stock: StockPlaceProtocol) -> UIViewController {
+    let assembly = DetailsListAssembly()
+    guard let delegate = self.coordinator as? DetailsListPresenterDelegateProtocol else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderDetailsListReaderProtocol else { return UIViewController() }
+    guard let detailListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
+    detailListModule.presenter.prepareToShowDetailList(for: stock)
+    return detailListModule.controller
+  }
+    
 }

@@ -30,7 +30,7 @@
                                     </textField>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="RLZ-Bn-SNH">
                                         <rect key="frame" x="384" y="0.0" width="20" height="40"/>
-                                        <color key="color" red="1" green="0.72245967580000003" blue="0.21572556479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="color" red="1" green="0.72156862745098038" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

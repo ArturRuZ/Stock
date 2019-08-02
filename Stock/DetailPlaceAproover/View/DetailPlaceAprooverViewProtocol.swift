@@ -10,8 +10,10 @@ import Foundation
 
 protocol DetailPlaceAprooverViewInputProtocol: class {
   var output: DetailPlaceAprooverViewOutputProtocol {get set}
-  func show(detail: StockDetail, place: StockPlace )
+  func show(detail: StockDetailProtocol, place: StockPlaceProtocol )
 }
 protocol DetailPlaceAprooverViewOutputProtocol: class {
   func viewDidLoad()
+  func cancelCellPressed()
+  func aprooveCellPressed()
 }

@@ -13,8 +13,13 @@ final class Coordinator {
   // MARK: - Properties
   
   private let controllerBuilder: ControllerBuilderProtocol
-  lazy private var rootController = self.controllerBuilder.buildRootController()
-
+  private lazy var rootController: UINavigationController = {
+    let navigationController = UINavigationController()
+    let rootController = self.controllerBuilder.buildRootController()
+    navigationController.navigationBar.isHidden = true
+    navigationController.pushViewController(rootController, animated: true)
+    return navigationController
+    }()
   
   // MARK: - Initialization
   
@@ -27,6 +32,7 @@ final class Coordinator {
 
 extension Coordinator: CoordinatorProtocol {
   func getRootController() -> UIViewController {
+    
     return rootController
   }
 }
@@ -34,25 +40,31 @@ extension Coordinator: CoordinatorProtocol {
 // MARK: - QrScannerPresenterDelegateProtocol implementation
 
 extension Coordinator: QrScannerPresenterDelegateProtocol {
-  func showDetailPlaceAproover(detail: StockDetail, place: StockPlace) {
-    guard let rootTabBarController = rootController as? UITabBarController else { return }
-    guard let qrScannerController = rootTabBarController.viewControllers?.first as? QrScannerViewController else { return }
+  func showDetailPlaceAproover(detail: StockDetailProtocol, place: StockPlaceProtocol) {
     let detailPlaceAprooverController = controllerBuilder.buildDetailPlaceAprooverController(detail: detail, place: place)
-    qrScannerController.present(detailPlaceAprooverController, animated: true)
+    rootController.pushViewController(detailPlaceAprooverController, animated: true)
   }
 }
 
 // MARK: - DetailPlaceAprooverPresenterDelegateProtocol implementation
 
 extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
+  func showQrscanner() {
+     rootController.popViewController(animated: true)
+  }
 }
 
-// MARK: - StockViewerPresenterDelegateProtocol implementation
+// MARK: - StockListPresenterDelegateProtocol implementation
 
-extension Coordinator: StockViewerPresenterDelegateProtocol {
+extension Coordinator: StockListPresenterDelegateProtocol {
+  func showDetailsList(for stock: StockPlaceProtocol) {
+    let detailListController = controllerBuilder.buildDetailsListController(for: stock)
+    rootController.pushViewController(detailListController, animated: true)
+  }
+  
 }
 
-// MARK: - CommonInfoViewerPresenterDelegateProtocol implementation
+// MARK: - DetailsListPresenterDelegateProtocol implementation
 
-extension Coordinator: CommonInfoViewerPresenterDelegateProtocol {
+extension Coordinator: DetailsListPresenterDelegateProtocol {
 }

@@ -14,3 +14,9 @@ struct StockDetail: StockDetailProtocol {
   var size: [Int]
   var date: Date
 }
+
+extension StockDetail: DetailInfoCellProtocol {
+}
+extension StockDetail: DetailListCellProtocol {
+  
+}

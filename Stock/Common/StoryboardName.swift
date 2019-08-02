@@ -11,6 +11,6 @@ import Foundation
 enum StoryboardName: String {
   case qrScanner = "QrScanner"
   case detailPlaceAproover = "DetailPlaceAproover"
-  case stockViewer = "StockViewer"
-  case commonInfoViewer = "CommonInfoViewer"
+  case stockList = "StockList"
+  case detailsList = "DetailsList"
 }

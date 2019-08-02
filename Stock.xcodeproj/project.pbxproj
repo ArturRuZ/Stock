@@ -22,7 +22,7 @@
 		34677C1E22F0A9CB004A7B0F /* QrScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */; };
 		34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */; };
 		34677C2222F0AA08004A7B0F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2122F0AA08004A7B0F /* DataProvider.swift */; };
-		34677C2422F0AA1A004A7B0F /* DataProviderReaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */; };
+		34677C2422F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2322F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift */; };
 		34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2522F0AA3B004A7B0F /* StockDetail.swift */; };
 		34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */; };
 		34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C2922F0AA59004A7B0F /* StockPlace.swift */; };
@@ -33,19 +33,19 @@
 		34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */; };
 		34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */; };
 		34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */; };
-		34677C4A22F2122A004A7B0F /* StockViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4222F21229004A7B0F /* StockViewerPresenter.swift */; };
-		34677C4B22F2122A004A7B0F /* StockViewerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */; };
-		34677C4C22F2122A004A7B0F /* StockViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4522F21229004A7B0F /* StockViewerViewController.swift */; };
-		34677C4D22F2122A004A7B0F /* StockViewerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */; };
-		34677C4E22F2122A004A7B0F /* StockViewerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4822F21229004A7B0F /* StockViewerAssembly.swift */; };
-		34677C5922F2139C004A7B0F /* CommonInfoViewerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */; };
-		34677C5A22F2139C004A7B0F /* CommonInfoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */; };
-		34677C5B22F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */; };
-		34677C5C22F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */; };
-		34677C5D22F2139C004A7B0F /* CommonInfoViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */; };
+		34677C4A22F2122A004A7B0F /* StockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4222F21229004A7B0F /* StockListPresenter.swift */; };
+		34677C4B22F2122A004A7B0F /* StockListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */; };
+		34677C4C22F2122A004A7B0F /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4522F21229004A7B0F /* StockListViewController.swift */; };
+		34677C4D22F2122A004A7B0F /* StockListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4622F21229004A7B0F /* StockListViewProtocol.swift */; };
+		34677C4E22F2122A004A7B0F /* StockListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4822F21229004A7B0F /* StockListAssembly.swift */; };
+		34677C5922F2139C004A7B0F /* DetailsListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5122F2139C004A7B0F /* DetailsListAssembly.swift */; };
+		34677C5A22F2139C004A7B0F /* DetailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5322F2139C004A7B0F /* DetailsListViewController.swift */; };
+		34677C5B22F2139C004A7B0F /* DetailsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5422F2139C004A7B0F /* DetailsListViewProtocol.swift */; };
+		34677C5C22F2139C004A7B0F /* DetailsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5722F2139C004A7B0F /* DetailsListPresenterProtocol.swift */; };
+		34677C5D22F2139C004A7B0F /* DetailsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5822F2139C004A7B0F /* DetailsListPresenter.swift */; };
 		34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */; };
-		34677C6122F21485004A7B0F /* StockViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6022F21485004A7B0F /* StockViewer.storyboard */; };
-		34677C6322F21494004A7B0F /* CommonInfoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */; };
+		34677C6122F21485004A7B0F /* StockList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6022F21485004A7B0F /* StockList.storyboard */; };
+		34677C6322F21494004A7B0F /* DetailsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6222F21494004A7B0F /* DetailsList.storyboard */; };
 		34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */; };
 		34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6722F2164F004A7B0F /* DetailInfoCell.xib */; };
 		34677C6A22F2166E004A7B0F /* AprooveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6922F2166E004A7B0F /* AprooveCell.xib */; };
@@ -54,9 +54,12 @@
 		34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */; };
 		34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */; };
 		34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */; };
-		34677C7B22F2276A004A7B0F /* StockViewerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7A22F2276A004A7B0F /* StockViewerCell.swift */; };
-		34677C7D22F22785004A7B0F /* StockViewerCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */; };
-		34677C8222F22932004A7B0F /* StockViewerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C8122F22932004A7B0F /* StockViewerCell.xib */; };
+		34677C7B22F2276A004A7B0F /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7A22F2276A004A7B0F /* StockListCell.swift */; };
+		34677C7D22F22785004A7B0F /* StockListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */; };
+		34677C8222F22932004A7B0F /* StockListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C8122F22932004A7B0F /* StockListCell.xib */; };
+		346A76E222F4CD2F0077D8FB /* DetailListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A76E022F4CD2F0077D8FB /* DetailListCellProtocol.swift */; };
+		346A76E322F4CD2F0077D8FB /* DetailsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A76E122F4CD2F0077D8FB /* DetailsListCell.swift */; };
+		346A76E622F4CD730077D8FB /* DetailsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346A76E522F4CD730077D8FB /* DetailsListCell.xib */; };
 		348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C400322EEE80900E1AE66 /* AppDelegate.swift */; };
 		348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400722EEE80900E1AE66 /* QrScanner.storyboard */; };
 		348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348C400A22EEE80B00E1AE66 /* Assets.xcassets */; };
@@ -79,7 +82,7 @@
 		34677C1D22F0A9CB004A7B0F /* QrScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenter.swift; sourceTree = "<group>"; };
 		34677C1F22F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenterProtocol.swift; sourceTree = "<group>"; };
 		34677C2122F0AA08004A7B0F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderReaderProtocol.swift; sourceTree = "<group>"; };
+		34677C2322F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderSingleReaderProtocol.swift; sourceTree = "<group>"; };
 		34677C2522F0AA3B004A7B0F /* StockDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetail.swift; sourceTree = "<group>"; };
 		34677C2722F0AA4A004A7B0F /* StockDetailProcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailProcol.swift; sourceTree = "<group>"; };
 		34677C2922F0AA59004A7B0F /* StockPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlace.swift; sourceTree = "<group>"; };
@@ -90,19 +93,19 @@
 		34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverAssembly.swift; sourceTree = "<group>"; };
 		34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenter.swift; sourceTree = "<group>"; };
 		34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C4222F21229004A7B0F /* StockViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerPresenter.swift; sourceTree = "<group>"; };
-		34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C4522F21229004A7B0F /* StockViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerViewController.swift; sourceTree = "<group>"; };
-		34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerViewProtocol.swift; sourceTree = "<group>"; };
-		34677C4822F21229004A7B0F /* StockViewerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewerAssembly.swift; sourceTree = "<group>"; };
-		34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerAssembly.swift; sourceTree = "<group>"; };
-		34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerViewController.swift; sourceTree = "<group>"; };
-		34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerViewProtocol.swift; sourceTree = "<group>"; };
-		34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonInfoViewerPresenter.swift; sourceTree = "<group>"; };
+		34677C4222F21229004A7B0F /* StockListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListPresenter.swift; sourceTree = "<group>"; };
+		34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C4522F21229004A7B0F /* StockListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
+		34677C4622F21229004A7B0F /* StockListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListViewProtocol.swift; sourceTree = "<group>"; };
+		34677C4822F21229004A7B0F /* StockListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListAssembly.swift; sourceTree = "<group>"; };
+		34677C5122F2139C004A7B0F /* DetailsListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListAssembly.swift; sourceTree = "<group>"; };
+		34677C5322F2139C004A7B0F /* DetailsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListViewController.swift; sourceTree = "<group>"; };
+		34677C5422F2139C004A7B0F /* DetailsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListViewProtocol.swift; sourceTree = "<group>"; };
+		34677C5722F2139C004A7B0F /* DetailsListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C5822F2139C004A7B0F /* DetailsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListPresenter.swift; sourceTree = "<group>"; };
 		34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPlaceAproover.storyboard; sourceTree = "<group>"; };
-		34677C6022F21485004A7B0F /* StockViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockViewer.storyboard; sourceTree = "<group>"; };
-		34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonInfoViewer.storyboard; sourceTree = "<group>"; };
+		34677C6022F21485004A7B0F /* StockList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockList.storyboard; sourceTree = "<group>"; };
+		34677C6222F21494004A7B0F /* DetailsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsList.storyboard; sourceTree = "<group>"; };
 		34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoCell.xib; sourceTree = "<group>"; };
 		34677C6722F2164F004A7B0F /* DetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoCell.xib; sourceTree = "<group>"; };
 		34677C6922F2166E004A7B0F /* AprooveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AprooveCell.xib; sourceTree = "<group>"; };
@@ -111,9 +114,12 @@
 		34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCellProtocol.swift; sourceTree = "<group>"; };
 		34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
 		34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCellProtocol.swift; sourceTree = "<group>"; };
-		34677C7A22F2276A004A7B0F /* StockViewerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewerCell.swift; sourceTree = "<group>"; };
-		34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewerCellProtocol.swift; sourceTree = "<group>"; };
-		34677C8122F22932004A7B0F /* StockViewerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockViewerCell.xib; sourceTree = "<group>"; };
+		34677C7A22F2276A004A7B0F /* StockListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
+		34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCellProtocol.swift; sourceTree = "<group>"; };
+		34677C8122F22932004A7B0F /* StockListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockListCell.xib; sourceTree = "<group>"; };
+		346A76E022F4CD2F0077D8FB /* DetailListCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailListCellProtocol.swift; sourceTree = "<group>"; };
+		346A76E122F4CD2F0077D8FB /* DetailsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListCell.swift; sourceTree = "<group>"; };
+		346A76E522F4CD730077D8FB /* DetailsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsListCell.xib; sourceTree = "<group>"; };
 		348C400022EEE80800E1AE66 /* Stock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348C400322EEE80900E1AE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348C400822EEE80900E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QrScanner.storyboard; sourceTree = "<group>"; };
@@ -275,7 +281,7 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		34677C4022F2121D004A7B0F /* StockViewer */ = {
+		34677C4022F2121D004A7B0F /* StockList */ = {
 			isa = PBXGroup;
 			children = (
 				34677C4722F21229004A7B0F /* Assembly */,
@@ -283,14 +289,14 @@
 				34677C4122F21229004A7B0F /* Presenter */,
 				34677C4422F21229004A7B0F /* View */,
 			);
-			path = StockViewer;
+			path = StockList;
 			sourceTree = "<group>";
 		};
 		34677C4122F21229004A7B0F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				34677C4222F21229004A7B0F /* StockViewerPresenter.swift */,
-				34677C4322F21229004A7B0F /* StockViewerPresenterProtocol.swift */,
+				34677C4222F21229004A7B0F /* StockListPresenter.swift */,
+				34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -299,9 +305,9 @@
 			isa = PBXGroup;
 			children = (
 				34677C7922F22746004A7B0F /* StockViewerCell */,
-				34677C4522F21229004A7B0F /* StockViewerViewController.swift */,
-				34677C4622F21229004A7B0F /* StockViewerViewProtocol.swift */,
-				34677C6022F21485004A7B0F /* StockViewer.storyboard */,
+				34677C4522F21229004A7B0F /* StockListViewController.swift */,
+				34677C4622F21229004A7B0F /* StockListViewProtocol.swift */,
+				34677C6022F21485004A7B0F /* StockList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,7 +315,7 @@
 		34677C4722F21229004A7B0F /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				34677C4822F21229004A7B0F /* StockViewerAssembly.swift */,
+				34677C4822F21229004A7B0F /* StockListAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -335,7 +341,7 @@
 		34677C5022F2139C004A7B0F /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				34677C5122F2139C004A7B0F /* CommonInfoViewerAssembly.swift */,
+				34677C5122F2139C004A7B0F /* DetailsListAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -343,9 +349,10 @@
 		34677C5222F2139C004A7B0F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				34677C5322F2139C004A7B0F /* CommonInfoViewerViewController.swift */,
-				34677C5422F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift */,
-				34677C6222F21494004A7B0F /* CommonInfoViewer.storyboard */,
+				346A76DF22F4CC930077D8FB /* DetailsListCell */,
+				34677C5322F2139C004A7B0F /* DetailsListViewController.swift */,
+				34677C5422F2139C004A7B0F /* DetailsListViewProtocol.swift */,
+				34677C6222F21494004A7B0F /* DetailsList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,8 +367,8 @@
 		34677C5622F2139C004A7B0F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				34677C5722F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift */,
-				34677C5822F2139C004A7B0F /* CommonInfoViewerPresenter.swift */,
+				34677C5822F2139C004A7B0F /* DetailsListPresenter.swift */,
+				34677C5722F2139C004A7B0F /* DetailsListPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -417,9 +424,9 @@
 		34677C7922F22746004A7B0F /* StockViewerCell */ = {
 			isa = PBXGroup;
 			children = (
-				34677C7A22F2276A004A7B0F /* StockViewerCell.swift */,
-				34677C7C22F22785004A7B0F /* StockViewerCellProtocol.swift */,
-				34677C8122F22932004A7B0F /* StockViewerCell.xib */,
+				34677C7A22F2276A004A7B0F /* StockListCell.swift */,
+				34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */,
+				34677C8122F22932004A7B0F /* StockListCell.xib */,
 			);
 			path = StockViewerCell;
 			sourceTree = "<group>";
@@ -428,9 +435,19 @@
 			isa = PBXGroup;
 			children = (
 				34677C2122F0AA08004A7B0F /* DataProvider.swift */,
-				34677C2322F0AA1A004A7B0F /* DataProviderReaderProtocol.swift */,
+				34677C2322F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		346A76DF22F4CC930077D8FB /* DetailsListCell */ = {
+			isa = PBXGroup;
+			children = (
+				346A76E022F4CD2F0077D8FB /* DetailListCellProtocol.swift */,
+				346A76E122F4CD2F0077D8FB /* DetailsListCell.swift */,
+				346A76E522F4CD730077D8FB /* DetailsListCell.xib */,
+			);
+			path = DetailsListCell;
 			sourceTree = "<group>";
 		};
 		348C3FF722EEE80800E1AE66 = {
@@ -458,7 +475,7 @@
 				34677BFC22F0A70B004A7B0F /* Services */,
 				34677BFD22F0A719004A7B0F /* QrScanner */,
 				34677C3122F20FCC004A7B0F /* DetailPlaceAproover */,
-				34677C4022F2121D004A7B0F /* StockViewer */,
+				34677C4022F2121D004A7B0F /* StockList */,
 				34677C4F22F2138A004A7B0F /* CommonInfoViewer */,
 				348C400A22EEE80B00E1AE66 /* Assets.xcassets */,
 				348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */,
@@ -527,14 +544,15 @@
 			files = (
 				348C400E22EEE80B00E1AE66 /* LaunchScreen.storyboard in Resources */,
 				348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */,
-				34677C6122F21485004A7B0F /* StockViewer.storyboard in Resources */,
+				34677C6122F21485004A7B0F /* StockList.storyboard in Resources */,
 				34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */,
-				34677C6322F21494004A7B0F /* CommonInfoViewer.storyboard in Resources */,
+				34677C6322F21494004A7B0F /* DetailsList.storyboard in Resources */,
 				34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */,
 				348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */,
-				34677C8222F22932004A7B0F /* StockViewerCell.xib in Resources */,
+				34677C8222F22932004A7B0F /* StockListCell.xib in Resources */,
 				34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */,
 				34677C6A22F2166E004A7B0F /* AprooveCell.xib in Resources */,
+				346A76E622F4CD730077D8FB /* DetailsListCell.xib in Resources */,
 				34677C6C22F2168B004A7B0F /* CancelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,29 +567,30 @@
 				34677C2C22F0AA65004A7B0F /* StockPlaceProtocol.swift in Sources */,
 				34677C1C22F0A9A3004A7B0F /* QrScannerViewProtocol.swift in Sources */,
 				34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */,
-				34677C5B22F2139C004A7B0F /* CommonInfoViewerViewProtocol.swift in Sources */,
+				34677C5B22F2139C004A7B0F /* DetailsListViewProtocol.swift in Sources */,
 				34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */,
-				34677C4C22F2122A004A7B0F /* StockViewerViewController.swift in Sources */,
+				34677C4C22F2122A004A7B0F /* StockListViewController.swift in Sources */,
 				34677C1022F0A80A004A7B0F /* Application.swift in Sources */,
 				34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */,
-				34677C4B22F2122A004A7B0F /* StockViewerPresenterProtocol.swift in Sources */,
+				34677C4B22F2122A004A7B0F /* StockListPresenterProtocol.swift in Sources */,
 				34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */,
-				34677C4A22F2122A004A7B0F /* StockViewerPresenter.swift in Sources */,
-				34677C5A22F2139C004A7B0F /* CommonInfoViewerViewController.swift in Sources */,
+				34677C4A22F2122A004A7B0F /* StockListPresenter.swift in Sources */,
+				34677C5A22F2139C004A7B0F /* DetailsListViewController.swift in Sources */,
 				34677C1422F0A81C004A7B0F /* ControllerBuilder.swift in Sources */,
+				346A76E322F4CD2F0077D8FB /* DetailsListCell.swift in Sources */,
 				34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */,
-				34677C7D22F22785004A7B0F /* StockViewerCellProtocol.swift in Sources */,
-				34677C7B22F2276A004A7B0F /* StockViewerCell.swift in Sources */,
+				34677C7D22F22785004A7B0F /* StockListCellProtocol.swift in Sources */,
+				34677C7B22F2276A004A7B0F /* StockListCell.swift in Sources */,
 				34677C0822F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift in Sources */,
 				34677C7222F21BA9004A7B0F /* DetailInfoCell.swift in Sources */,
-				34677C5922F2139C004A7B0F /* CommonInfoViewerAssembly.swift in Sources */,
+				34677C5922F2139C004A7B0F /* DetailsListAssembly.swift in Sources */,
 				34677C2A22F0AA59004A7B0F /* StockPlace.swift in Sources */,
 				34677C2022F0A9DA004A7B0F /* QrScannerPresenterProtocol.swift in Sources */,
 				34677C0922F0A7F1004A7B0F /* Result.swift in Sources */,
-				34677C2422F0AA1A004A7B0F /* DataProviderReaderProtocol.swift in Sources */,
+				34677C2422F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift in Sources */,
 				34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */,
 				34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */,
-				34677C4E22F2122A004A7B0F /* StockViewerAssembly.swift in Sources */,
+				34677C4E22F2122A004A7B0F /* StockListAssembly.swift in Sources */,
 				34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */,
 				34677C0722F0A7F1004A7B0F /* ErrorList.swift in Sources */,
 				34677C0A22F0A7F1004A7B0F /* StoryboardName.swift in Sources */,
@@ -581,10 +600,11 @@
 				34677C1522F0A81C004A7B0F /* ControllerBuilderProtocol.swift in Sources */,
 				34677C3B22F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift in Sources */,
 				34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */,
-				34677C4D22F2122A004A7B0F /* StockViewerViewProtocol.swift in Sources */,
+				34677C4D22F2122A004A7B0F /* StockListViewProtocol.swift in Sources */,
+				346A76E222F4CD2F0077D8FB /* DetailListCellProtocol.swift in Sources */,
 				34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */,
-				34677C5D22F2139C004A7B0F /* CommonInfoViewerPresenter.swift in Sources */,
-				34677C5C22F2139C004A7B0F /* CommonInfoViewerPresenterProtocol.swift in Sources */,
+				34677C5D22F2139C004A7B0F /* DetailsListPresenter.swift in Sources */,
+				34677C5C22F2139C004A7B0F /* DetailsListPresenterProtocol.swift in Sources */,
 				34677C3C22F20FF3004A7B0F /* DetailPlaceAprooverViewController.swift in Sources */,
 				34677C0D22F0A7FB004A7B0F /* Coordinator.swift in Sources */,
 				34677C1722F0A82B004A7B0F /* QrScannerAssembly.swift in Sources */,

@@ -22,7 +22,9 @@ final class PlaceInfoCellView: UITableViewCell {
   var placeInfoCellModel: PlaceInfoCellProtocol? {
     didSet {
       guard let placeInfoCellModel = placeInfoCellModel else { return }
-      
+      titleLabel.text = placeInfoCellModel.title
+      horisontalPositionLabel.text = "\(placeInfoCellModel.horizontalPosition)"
+      verticalPositionLabel.text = "\(placeInfoCellModel.verticalPosition)"
     }
   }
 }

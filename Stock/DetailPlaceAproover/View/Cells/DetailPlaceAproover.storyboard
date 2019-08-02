@@ -18,12 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orn-Be-Whw">
-                                <rect key="frame" x="0.0" y="772.5" width="414" height="89.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itA-WX-HDG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="648.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="orn-Be-Whw">
+                                <rect key="frame" x="0.0" y="692.5" width="414" height="89.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-x6-zAu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="728.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="628.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -31,12 +35,16 @@
                         <constraints>
                             <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="q7s-x6-zAu" secondAttribute="trailing" id="1ym-o2-FSh"/>
                             <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="orn-Be-Whw" secondAttribute="trailing" id="4We-Rz-pK3"/>
-                            <constraint firstItem="DOf-rc-4f2" firstAttribute="bottom" secondItem="orn-Be-Whw" secondAttribute="bottom" id="Cwf-XK-LzW"/>
+                            <constraint firstItem="itA-WX-HDG" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" id="4kf-bw-z4G"/>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="bottom" secondItem="orn-Be-Whw" secondAttribute="bottom" constant="80" id="Cwf-XK-LzW"/>
                             <constraint firstItem="q7s-x6-zAu" firstAttribute="top" secondItem="DOf-rc-4f2" secondAttribute="top" id="TGd-5z-uOl"/>
+                            <constraint firstItem="orn-Be-Whw" firstAttribute="top" secondItem="itA-WX-HDG" secondAttribute="bottom" id="U0h-V2-R1c"/>
                             <constraint firstItem="orn-Be-Whw" firstAttribute="height" secondItem="5Ae-zR-fCu" secondAttribute="height" multiplier="1:10" id="Wbd-F5-qFf"/>
-                            <constraint firstItem="orn-Be-Whw" firstAttribute="top" secondItem="q7s-x6-zAu" secondAttribute="bottom" id="Wfb-by-e2G"/>
+                            <constraint firstItem="orn-Be-Whw" firstAttribute="top" secondItem="q7s-x6-zAu" secondAttribute="bottom" constant="20" id="Wfb-by-e2G"/>
                             <constraint firstItem="orn-Be-Whw" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" id="eLk-cx-eJM"/>
+                            <constraint firstItem="itA-WX-HDG" firstAttribute="top" secondItem="DOf-rc-4f2" secondAttribute="top" id="f3g-pB-j9K"/>
                             <constraint firstItem="q7s-x6-zAu" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" id="mqJ-ts-FbV"/>
+                            <constraint firstItem="itA-WX-HDG" firstAttribute="trailing" secondItem="DOf-rc-4f2" secondAttribute="trailing" id="toa-dM-P8w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DOf-rc-4f2"/>
                     </view>

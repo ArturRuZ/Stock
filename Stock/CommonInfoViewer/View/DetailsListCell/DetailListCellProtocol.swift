@@ -1,5 +1,5 @@
 //
-//  DetailInfoCellProtocol.swift
+//  DetailsListCellProtocol.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-protocol DetailInfoCellProtocol {
+import Foundation
+
+protocol  DetailListCellProtocol {
   var type: String {get}
   var size: [Int] {get}
   var date: Date {get}

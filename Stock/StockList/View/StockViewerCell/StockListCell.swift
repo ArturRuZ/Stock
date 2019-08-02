@@ -1,5 +1,5 @@
 //
-//  StockViewerCell.swift
+//  StockListCell.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class StockViewerCellView: UITableViewCell {
+final class StockListCellView: UITableViewCell {
   
   // MARK: - Outlets
   
@@ -17,10 +17,10 @@ final class StockViewerCellView: UITableViewCell {
   
   // MARK: - Confegure PhoneCardEmailCellView:
   
-  var stockViewerCellModel: PlaceInfoCellProtocol? {
+  var stockListCellModel: StockListCellProtocol? {
     didSet {
-      guard let stockViewerCellModel = stockViewerCellModel else { return }
-      
+      guard let stockListCellModel = stockListCellModel else { return }
+      stockTitleLabel.text = stockListCellModel.title
     }
   }
 }

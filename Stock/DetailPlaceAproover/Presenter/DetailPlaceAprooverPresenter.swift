@@ -12,13 +12,13 @@ final class  DetailPlaceAprooverPresenter {
   
   // MARK: - Properties
   
-  private var presenterOutput: DetailPlaceAprooverViewInputProtocol!
-  private var presenterDelegate: DetailPlaceAprooverPresenterDelegateProtocol!
+  private weak var presenterOutput: DetailPlaceAprooverViewInputProtocol!
+  private weak var presenterDelegate: DetailPlaceAprooverPresenterDelegateProtocol!
   private var dataProvider: DataProviderSaverProtocol
-  private var currentDetail: StockDetail?
-  private var currentPlace: StockPlace?
+  private var currentDetail: StockDetailProtocol?
+  private var currentPlace: StockPlaceProtocol?
   
-    // MARK: - Initialization
+  // MARK: - Initialization
   
   init (dataProvider: DataProviderSaverProtocol) {
     self.dataProvider = dataProvider
@@ -28,8 +28,18 @@ final class  DetailPlaceAprooverPresenter {
 // MARK: - DetailPlaceAprooverViewOutputProtocol Implementation
 
 extension DetailPlaceAprooverPresenter: DetailPlaceAprooverViewOutputProtocol {
+  func cancelCellPressed() {
+    delegate.showQrscanner()
+  }
+  func aprooveCellPressed() {
+    guard let detail = currentDetail, let place = currentPlace else { return }
+    dataProvider.save(detail: detail, place: place)
+    delegate.showQrscanner()
+  }
+  
   func viewDidLoad() {
-    
+    guard let detail = currentDetail, let place = currentPlace else { return }
+    presenterOutput.show(detail: detail, place: place)
   }
 }
 
@@ -51,7 +61,7 @@ extension DetailPlaceAprooverPresenter: DetailPlaceAprooverPresenterInputProtoco
       self.presenterOutput = newValue
     }
   }
-  func preparToShow(detail: StockDetail, place: StockPlace) {
+  func prepareToShow(detail: StockDetailProtocol, place: StockPlaceProtocol) {
     currentDetail = detail
     currentPlace = place
   }

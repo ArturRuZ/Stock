@@ -11,5 +11,6 @@ import UIKit
 protocol ControllerBuilderProtocol: class {
   var cordinator: CoordinatorProtocol {get set}
   func buildRootController() -> UIViewController
-  func buildDetailPlaceAprooverController(detail: StockDetail, place: StockPlace) -> UIViewController
+  func buildDetailPlaceAprooverController(detail: StockDetailProtocol, place: StockPlaceProtocol) -> UIViewController
+  func buildDetailsListController(for stock: StockPlaceProtocol) -> UIViewController
 }

@@ -21,7 +21,9 @@ final class DetailInfoCellView: UITableViewCell {
   var detailInfoCellModel: DetailInfoCellProtocol? {
     didSet {
       guard let detailInfoCellModel = detailInfoCellModel else { return }
-      
+      typeLabel.text = detailInfoCellModel.type
+      detailInfoCellModel.size.compactMap({sizeLabel.text = sizeLabel.text ?? "" + "\($0)" + "x"})
+      dateLabel.text = "\(detailInfoCellModel.date)"
     }
   }
 }
