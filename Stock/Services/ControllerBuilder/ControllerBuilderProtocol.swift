@@ -13,4 +13,6 @@ protocol ControllerBuilderProtocol: class {
   func buildRootController() -> UIViewController
   func buildDetailPlaceAprooverController(detail: StockDetailProtocol, place: StockPlaceProtocol) -> UIViewController
   func buildDetailsListController(for stock: StockPlaceProtocol) -> UIViewController
+  func buildLoginController() -> UIViewController
+  func buildRegisterController() -> UIViewController
 }

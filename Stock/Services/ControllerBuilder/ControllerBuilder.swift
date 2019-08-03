@@ -59,8 +59,8 @@ extension ControllerBuilder: ControllerBuilderProtocol {
     let stockListController = createStockListController()
     stockListController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "list_36pt_1x.png"), tag: 1)
     tabBarController.setViewControllers([qrScannerController, stockListController], animated: false)
-    tabBarController.tabBar.tintColor = .orange
-    tabBarController.tabBar.barTintColor = .black
+    tabBarController.tabBar.tintColor = .blue
+//    tabBarController.tabBar.barTintColor = .blue
     tabBarController.selectedIndex = 0
     return tabBarController
   }
@@ -79,6 +79,18 @@ extension ControllerBuilder: ControllerBuilderProtocol {
     guard let detailListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     detailListModule.presenter.prepareToShowDetailList(for: stock)
     return detailListModule.controller
+  }
+  func buildLoginController() -> UIViewController {
+    let assembly = LoginAssembly()
+    guard let delegate = self.coordinator as? LoginPresenterDelegateProtocol else { return UIViewController() }
+    guard let loginModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    return loginModule.controller
+  }
+  func buildRegisterController() -> UIViewController {
+    let assembly = RegisterAssembly()
+    guard let delegate = self.coordinator as? RegisterPresenterDelegateProtocol else { return UIViewController() }
+    guard let registerModule = assembly.build(delegate: delegate) else { return UIViewController() }
+    return registerModule.controller
   }
     
 }

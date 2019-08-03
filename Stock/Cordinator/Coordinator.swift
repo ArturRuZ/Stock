@@ -13,13 +13,14 @@ final class Coordinator {
   // MARK: - Properties
   
   private let controllerBuilder: ControllerBuilderProtocol
-  private lazy var rootController: UINavigationController = {
+  private lazy var navigationController: UINavigationController = {
     let navigationController = UINavigationController()
-    let rootController = self.controllerBuilder.buildRootController()
-    navigationController.navigationBar.isHidden = true
-    navigationController.pushViewController(rootController, animated: true)
+//    let rootController = self.controllerBuilder.buildRootController()
+      navigationController.navigationBar.isHidden = true
+//    navigationController.pushViewController(rootController, animated: true)
     return navigationController
     }()
+  private lazy var rootController = controllerBuilder.buildRootController()
   
   // MARK: - Initialization
   
@@ -32,8 +33,9 @@ final class Coordinator {
 
 extension Coordinator: CoordinatorProtocol {
   func getRootController() -> UIViewController {
-    
-    return rootController
+    let loginController = controllerBuilder.buildLoginController()
+    navigationController.pushViewController(loginController, animated: true)
+    return navigationController
   }
 }
 
@@ -42,7 +44,7 @@ extension Coordinator: CoordinatorProtocol {
 extension Coordinator: QrScannerPresenterDelegateProtocol {
   func showDetailPlaceAproover(detail: StockDetailProtocol, place: StockPlaceProtocol) {
     let detailPlaceAprooverController = controllerBuilder.buildDetailPlaceAprooverController(detail: detail, place: place)
-    rootController.pushViewController(detailPlaceAprooverController, animated: true)
+    navigationController.pushViewController(detailPlaceAprooverController, animated: true)
   }
 }
 
@@ -50,7 +52,7 @@ extension Coordinator: QrScannerPresenterDelegateProtocol {
 
 extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
   func showQrscanner() {
-     rootController.popViewController(animated: true)
+     navigationController.popViewController(animated: true)
   }
 }
 
@@ -59,12 +61,31 @@ extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
 extension Coordinator: StockListPresenterDelegateProtocol {
   func showDetailsList(for stock: StockPlaceProtocol) {
     let detailListController = controllerBuilder.buildDetailsListController(for: stock)
-    rootController.pushViewController(detailListController, animated: true)
+    navigationController.pushViewController(detailListController, animated: true)
   }
-  
 }
 
 // MARK: - DetailsListPresenterDelegateProtocol implementation
 
 extension Coordinator: DetailsListPresenterDelegateProtocol {
+}
+
+// MARK: - LoginPresenterDelegateProtocol implementation
+
+extension Coordinator: LoginPresenterDelegateProtocol {
+  func showRootController() {
+    navigationController.viewControllers.removeAll()
+    navigationController.pushViewController(rootController, animated: true)
+  }
+  func showRegisterController() {
+    let registerController = controllerBuilder.buildRegisterController()
+    print (navigationController.viewControllers)
+    navigationController.pushViewController(registerController, animated: true)
+  }
+}
+
+// MARK: - LoginPresenterDelegateProtocol implementation
+
+extension Coordinator: RegisterPresenterDelegateProtocol {
+ 
 }
