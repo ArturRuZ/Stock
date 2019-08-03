@@ -1,5 +1,5 @@
 //
-//  StockListViewController.swift
+//  StockPlaceListViewController.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-final class StockListViewController: UIViewController {
+final class StockPlaceListViewController: UIViewController {
   
   // MARK: - Outlets
   
@@ -17,10 +17,10 @@ final class StockListViewController: UIViewController {
   
   // MARK: - Properties
   
-  private var viewOutput: StockListViewOutputProtocol!
-  private let kStockListCellNib = UINib(nibName: "StockListCell", bundle: nil)
-  private let kStockListCellIdentifier = "StockListCellIdentifier"
-  private var currentStockList: [StockPlaceProtocol]?
+  private var viewOutput: StockPlaceListViewOutputProtocol!
+  private let kStockPlaceListCellNib = UINib(nibName: "StockPlaceListCell", bundle: nil)
+  private let kStockPlaceListCellIdentifier = "StockPlaceListCellIdentifier"
+  private var currentStockPlaceList: [StockPlaceProtocol]?
   
   // MARK: - BuildInMethods
   
@@ -39,7 +39,7 @@ final class StockListViewController: UIViewController {
   // MARK: - Private methods
   
   private func setupStockTableView() {
-    stockTableView.register(kStockListCellNib, forCellReuseIdentifier: kStockListCellIdentifier)
+    stockTableView.register(kStockPlaceListCellNib, forCellReuseIdentifier: kStockPlaceListCellIdentifier)
     stockTableView.rowHeight = UITableView.automaticDimension
     stockTableView.estimatedRowHeight = 80
     stockTableView.dataSource = self
@@ -48,10 +48,10 @@ final class StockListViewController: UIViewController {
   }
 }
 
-// MARK: - StockListViewInputProtocol Implementation
+// MARK: - StockPlaceListViewInputProtocol Implementation
 
-extension StockListViewController: StockListViewInputProtocol {
-  var output: StockListViewOutputProtocol {
+extension StockPlaceListViewController: StockPlaceListViewInputProtocol {
+  var output: StockPlaceListViewOutputProtocol {
     get {
       return self.viewOutput
     }
@@ -60,32 +60,32 @@ extension StockListViewController: StockListViewInputProtocol {
     }
   }
   func showStock(list: [StockPlaceProtocol]) {
-    currentStockList = list
+    currentStockPlaceList = list
     stockTableView.reloadData()
   }
 }
 
 // MARK: - UITableViewDelegate Implementation
 
-extension StockListViewController: UITableViewDelegate {
+extension StockPlaceListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    guard let stock = currentStockList?[indexPath.row] else { return }
+    guard let stock = currentStockPlaceList?[indexPath.row] else { return }
     viewOutput.selected(stock: stock)
   }
 }
 
 // MARK: - UITableViewDataSource Implementation
 
-extension StockListViewController: UITableViewDataSource {
+extension StockPlaceListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return currentStockList?.count ?? 0
+    return currentStockPlaceList?.count ?? 0
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = stockTableView.dequeueReusableCell(withIdentifier: kStockListCellIdentifier,
-                                                        for: indexPath) as? StockListCellView else {
+    guard let cell = stockTableView.dequeueReusableCell(withIdentifier: kStockPlaceListCellIdentifier,
+                                                        for: indexPath) as? StockPlaceListCellView else {
                                                           return UITableViewCell()}
-    guard let stockListCellModel = currentStockList?[indexPath.row] as? StockListCellProtocol else {
+    guard let stockListCellModel = currentStockPlaceList?[indexPath.row] as? StockPlaceListCellProtocol else {
       return  UITableViewCell()}
     
     cell.stockListCellModel = stockListCellModel

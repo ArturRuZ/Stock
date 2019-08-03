@@ -13,6 +13,6 @@ enum StoryboardName: String {
   case register = "Register"
   case qrScanner = "QrScanner"
   case detailPlaceAproover = "DetailPlaceAproover"
-  case stockList = "StockList"
+  case stockPlaceList = "StockPlaceList"
   case detailsList = "DetailsList"
 }

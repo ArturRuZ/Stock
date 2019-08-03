@@ -56,9 +56,9 @@ extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
   }
 }
 
-// MARK: - StockListPresenterDelegateProtocol implementation
+// MARK: - StockPlaceListPresenterDelegateProtocol implementation
 
-extension Coordinator: StockListPresenterDelegateProtocol {
+extension Coordinator: StockPlaceListPresenterDelegateProtocol {
   func showDetailsList(for stock: StockPlaceProtocol) {
     let detailListController = controllerBuilder.buildDetailsListController(for: stock)
     navigationController.pushViewController(detailListController, animated: true)

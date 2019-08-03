@@ -12,5 +12,5 @@ protocol StockDetailProtocol {
   var id: String {get}
   var type: String {get}
   var size: [Int] {get}
-  var date: Date {get}
+  var date: String {get}
 }

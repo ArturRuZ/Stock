@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1058698835437-0qkudhfpjunh4c37drl2n2idk22rctit.apps.googleusercontent.com</string>
+	<string>1058698835437-21kh8e5qr6o86fihlak9j8rj87ksjbst.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1058698835437-0qkudhfpjunh4c37drl2n2idk22rctit</string>
+	<string>com.googleusercontent.apps.1058698835437-21kh8e5qr6o86fihlak9j8rj87ksjbst</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB0mCAfD8HJJW0XRRLvLyfMJkoLjc1fK90</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.arturRuzhnikov.stock</string>
+	<string>ArturRuzhnikov.Stock</string>
 	<key>PROJECT_ID</key>
 	<string>stock-1802d</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1058698835437:ios:42f9aada1fd4fa30</string>
+	<string>1:1058698835437:ios:e18462bb207d33b3</string>
 	<key>DATABASE_URL</key>
 	<string>https://stock-1802d.firebaseio.com</string>
 </dict>

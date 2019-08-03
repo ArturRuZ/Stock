@@ -9,12 +9,12 @@
 import Foundation
 
 protocol DataProviderSingleReaderProtocol: class {
-  func getDetail(by id: String) -> StockDetailProtocol?
+  func getDetail(by id: String, complition: @escaping (Result<StockDetailProtocol>) -> Void)
   func getStockPlace(by id: String) -> StockPlaceProtocol?
 }
 
-protocol DataProviderStockPlaceListReaderProtocol: class {
-  func getStockPlaceList() -> [StockPlaceProtocol]
+protocol DataProviderstockListReaderProtocol: class {
+  func getstockList() -> [StockPlaceProtocol]
 }
 
 protocol DataProviderDetailsListReaderProtocol: class {
@@ -23,4 +23,8 @@ protocol DataProviderDetailsListReaderProtocol: class {
 
 protocol DataProviderSaverProtocol: class {
   func save(detail: StockDetailProtocol, place: StockPlaceProtocol)
+}
+
+protocol DataProviderCloudBase {
+  func createCloudObjects()
 }

@@ -14,11 +14,7 @@ final class ControllerBuilder {
   
   private weak var coordinator: CoordinatorProtocol!
   private let dataProvider = DataProvider()
-  // MARK: - Initialization
-  
-  init() {
 
-  }
   
   // MARK: - Private methods
   
@@ -29,13 +25,13 @@ final class ControllerBuilder {
     guard let qrScannerModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     return qrScannerModule.controller
   }
-  private func createStockListController() -> UIViewController {
-    let assembly = StockListAssembly()
-    guard let delegate = coordinator as? StockListPresenterDelegateProtocol else { return UIViewController() }
-    guard let dataProvider = dataProvider as? DataProviderStockPlaceListReaderProtocol else { return UIViewController() }
-    guard let StockListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
-    StockListModule.controller.navigationItem.title = "Cклады"
-    return StockListModule.controller
+  private func createStockPlaceListController() -> UIViewController {
+    let assembly = StockPlaceListAssembly()
+    guard let delegate = coordinator as? StockPlaceListPresenterDelegateProtocol else { return UIViewController() }
+    guard let dataProvider = dataProvider as? DataProviderstockListReaderProtocol else { return UIViewController() }
+    guard let StockPlaceListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
+    StockPlaceListModule.controller.navigationItem.title = "Cклады"
+    return StockPlaceListModule.controller
   }
  
 }
@@ -53,10 +49,11 @@ extension ControllerBuilder: ControllerBuilderProtocol {
   }
  
   func buildRootController() -> UIViewController {
+    if let dataprovider = dataProvider as? DataProviderCloudBase { dataprovider.createCloudObjects() }
     let tabBarController = UITabBarController()
     let qrScannerController = createQrScannerController()
     qrScannerController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "camera_36pt_1x.png"), tag: 0)
-    let stockListController = createStockListController()
+    let stockListController = createStockPlaceListController()
     stockListController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "list_36pt_1x.png"), tag: 1)
     tabBarController.setViewControllers([qrScannerController, stockListController], animated: false)
     tabBarController.tabBar.tintColor = .blue
@@ -66,7 +63,7 @@ extension ControllerBuilder: ControllerBuilderProtocol {
   }
   func buildDetailPlaceAprooverController(detail: StockDetailProtocol, place: StockPlaceProtocol) -> UIViewController {
     let assembly = DetailPlaceAprooverAssembly()
-    guard let delegate = self.coordinator as? DetailPlaceAprooverPresenterDelegateProtocol else { return UIViewController() }
+    guard let delegate = coordinator as? DetailPlaceAprooverPresenterDelegateProtocol else { return UIViewController() }
     guard let dataProvider = dataProvider as? DataProviderSaverProtocol else { return UIViewController() }
     guard let detailPlaceAprooverModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     detailPlaceAprooverModule.presenter.prepareToShow(detail: detail, place: place)
@@ -74,7 +71,7 @@ extension ControllerBuilder: ControllerBuilderProtocol {
   }
   func buildDetailsListController(for stock: StockPlaceProtocol) -> UIViewController {
     let assembly = DetailsListAssembly()
-    guard let delegate = self.coordinator as? DetailsListPresenterDelegateProtocol else { return UIViewController() }
+    guard let delegate = coordinator as? DetailsListPresenterDelegateProtocol else { return UIViewController() }
     guard let dataProvider = dataProvider as? DataProviderDetailsListReaderProtocol else { return UIViewController() }
     guard let detailListModule = assembly.build(dataProvider: dataProvider, delegate: delegate) else { return UIViewController() }
     detailListModule.presenter.prepareToShowDetailList(for: stock)
@@ -82,13 +79,13 @@ extension ControllerBuilder: ControllerBuilderProtocol {
   }
   func buildLoginController() -> UIViewController {
     let assembly = LoginAssembly()
-    guard let delegate = self.coordinator as? LoginPresenterDelegateProtocol else { return UIViewController() }
+    guard let delegate = coordinator as? LoginPresenterDelegateProtocol else { return UIViewController() }
     guard let loginModule = assembly.build(delegate: delegate) else { return UIViewController() }
     return loginModule.controller
   }
   func buildRegisterController() -> UIViewController {
     let assembly = RegisterAssembly()
-    guard let delegate = self.coordinator as? RegisterPresenterDelegateProtocol else { return UIViewController() }
+    guard let delegate = coordinator as? RegisterPresenterDelegateProtocol else { return UIViewController() }
     guard let registerModule = assembly.build(delegate: delegate) else { return UIViewController() }
     return registerModule.controller
   }

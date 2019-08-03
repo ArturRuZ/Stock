@@ -12,7 +12,8 @@ struct StockDetail: StockDetailProtocol {
   var id: String
   var type: String
   var size: [Int]
-  var date: Date
+  var date: String
+
 }
 
 extension StockDetail: DetailInfoCellProtocol {

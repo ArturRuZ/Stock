@@ -1,5 +1,5 @@
 //
-//  StockListCell.swift
+//  StockPlaceListCell.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class StockListCellView: UITableViewCell {
+final class StockPlaceListCellView: UITableViewCell {
   
   // MARK: - Outlets
   
@@ -17,7 +17,7 @@ final class StockListCellView: UITableViewCell {
   
   // MARK: - Confegure PhoneCardEmailCellView:
   
-  var stockListCellModel: StockListCellProtocol? {
+  var stockListCellModel: StockPlaceListCellProtocol? {
     didSet {
       guard let stockListCellModel = stockListCellModel else { return }
       stockTitleLabel.text = stockListCellModel.title

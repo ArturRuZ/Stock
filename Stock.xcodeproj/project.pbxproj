@@ -46,18 +46,18 @@
 		34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */; };
 		34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */; };
 		34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */; };
-		34677C4A22F2122A004A7B0F /* StockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4222F21229004A7B0F /* StockListPresenter.swift */; };
-		34677C4B22F2122A004A7B0F /* StockListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */; };
-		34677C4C22F2122A004A7B0F /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4522F21229004A7B0F /* StockListViewController.swift */; };
-		34677C4D22F2122A004A7B0F /* StockListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4622F21229004A7B0F /* StockListViewProtocol.swift */; };
-		34677C4E22F2122A004A7B0F /* StockListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4822F21229004A7B0F /* StockListAssembly.swift */; };
+		34677C4A22F2122A004A7B0F /* StockPlaceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4222F21229004A7B0F /* StockPlaceListPresenter.swift */; };
+		34677C4B22F2122A004A7B0F /* StockPlaceListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4322F21229004A7B0F /* StockPlaceListPresenterProtocol.swift */; };
+		34677C4C22F2122A004A7B0F /* StockPlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4522F21229004A7B0F /* StockPlaceListViewController.swift */; };
+		34677C4D22F2122A004A7B0F /* StockPlaceListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4622F21229004A7B0F /* StockPlaceListViewProtocol.swift */; };
+		34677C4E22F2122A004A7B0F /* StockPlaceListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C4822F21229004A7B0F /* StockPlaceListAssembly.swift */; };
 		34677C5922F2139C004A7B0F /* DetailsListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5122F2139C004A7B0F /* DetailsListAssembly.swift */; };
 		34677C5A22F2139C004A7B0F /* DetailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5322F2139C004A7B0F /* DetailsListViewController.swift */; };
 		34677C5B22F2139C004A7B0F /* DetailsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5422F2139C004A7B0F /* DetailsListViewProtocol.swift */; };
 		34677C5C22F2139C004A7B0F /* DetailsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5722F2139C004A7B0F /* DetailsListPresenterProtocol.swift */; };
 		34677C5D22F2139C004A7B0F /* DetailsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C5822F2139C004A7B0F /* DetailsListPresenter.swift */; };
 		34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */; };
-		34677C6122F21485004A7B0F /* StockList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6022F21485004A7B0F /* StockList.storyboard */; };
+		34677C6122F21485004A7B0F /* StockPlaceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6022F21485004A7B0F /* StockPlaceList.storyboard */; };
 		34677C6322F21494004A7B0F /* DetailsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6222F21494004A7B0F /* DetailsList.storyboard */; };
 		34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */; };
 		34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C6722F2164F004A7B0F /* DetailInfoCell.xib */; };
@@ -67,13 +67,13 @@
 		34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */; };
 		34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */; };
 		34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */; };
-		34677C7B22F2276A004A7B0F /* StockListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7A22F2276A004A7B0F /* StockListCell.swift */; };
-		34677C7D22F22785004A7B0F /* StockListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */; };
-		34677C8222F22932004A7B0F /* StockListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C8122F22932004A7B0F /* StockListCell.xib */; };
+		34677C7B22F2276A004A7B0F /* StockPlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7A22F2276A004A7B0F /* StockPlaceListCell.swift */; };
+		34677C7D22F22785004A7B0F /* StockPlaceListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34677C7C22F22785004A7B0F /* StockPlaceListCellProtocol.swift */; };
+		34677C8222F22932004A7B0F /* StockPlaceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34677C8122F22932004A7B0F /* StockPlaceListCell.xib */; };
 		346A76E222F4CD2F0077D8FB /* DetailListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A76E022F4CD2F0077D8FB /* DetailListCellProtocol.swift */; };
 		346A76E322F4CD2F0077D8FB /* DetailsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A76E122F4CD2F0077D8FB /* DetailsListCell.swift */; };
 		346A76E622F4CD730077D8FB /* DetailsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 346A76E522F4CD730077D8FB /* DetailsListCell.xib */; };
-		346A76E822F577440077D8FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 346A76E722F577430077D8FB /* GoogleService-Info.plist */; };
+		3480035C22F5DF03005BE5ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3480035B22F5DF02005BE5ED /* GoogleService-Info.plist */; };
 		348C400422EEE80900E1AE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C400322EEE80900E1AE66 /* AppDelegate.swift */; };
 		348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348C400722EEE80900E1AE66 /* QrScanner.storyboard */; };
 		348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348C400A22EEE80B00E1AE66 /* Assets.xcassets */; };
@@ -121,18 +121,18 @@
 		34677C3722F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverAssembly.swift; sourceTree = "<group>"; };
 		34677C3922F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenter.swift; sourceTree = "<group>"; };
 		34677C3A22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPlaceAprooverPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C4222F21229004A7B0F /* StockListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListPresenter.swift; sourceTree = "<group>"; };
-		34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListPresenterProtocol.swift; sourceTree = "<group>"; };
-		34677C4522F21229004A7B0F /* StockListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
-		34677C4622F21229004A7B0F /* StockListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListViewProtocol.swift; sourceTree = "<group>"; };
-		34677C4822F21229004A7B0F /* StockListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListAssembly.swift; sourceTree = "<group>"; };
+		34677C4222F21229004A7B0F /* StockPlaceListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPlaceListPresenter.swift; sourceTree = "<group>"; };
+		34677C4322F21229004A7B0F /* StockPlaceListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPlaceListPresenterProtocol.swift; sourceTree = "<group>"; };
+		34677C4522F21229004A7B0F /* StockPlaceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPlaceListViewController.swift; sourceTree = "<group>"; };
+		34677C4622F21229004A7B0F /* StockPlaceListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPlaceListViewProtocol.swift; sourceTree = "<group>"; };
+		34677C4822F21229004A7B0F /* StockPlaceListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockPlaceListAssembly.swift; sourceTree = "<group>"; };
 		34677C5122F2139C004A7B0F /* DetailsListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListAssembly.swift; sourceTree = "<group>"; };
 		34677C5322F2139C004A7B0F /* DetailsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListViewController.swift; sourceTree = "<group>"; };
 		34677C5422F2139C004A7B0F /* DetailsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListViewProtocol.swift; sourceTree = "<group>"; };
 		34677C5722F2139C004A7B0F /* DetailsListPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListPresenterProtocol.swift; sourceTree = "<group>"; };
 		34677C5822F2139C004A7B0F /* DetailsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListPresenter.swift; sourceTree = "<group>"; };
 		34677C5E22F21467004A7B0F /* DetailPlaceAproover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPlaceAproover.storyboard; sourceTree = "<group>"; };
-		34677C6022F21485004A7B0F /* StockList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockList.storyboard; sourceTree = "<group>"; };
+		34677C6022F21485004A7B0F /* StockPlaceList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockPlaceList.storyboard; sourceTree = "<group>"; };
 		34677C6222F21494004A7B0F /* DetailsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsList.storyboard; sourceTree = "<group>"; };
 		34677C6522F2163E004A7B0F /* PlaceInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoCell.xib; sourceTree = "<group>"; };
 		34677C6722F2164F004A7B0F /* DetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoCell.xib; sourceTree = "<group>"; };
@@ -142,13 +142,13 @@
 		34677C7322F21BB4004A7B0F /* DetailInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCellProtocol.swift; sourceTree = "<group>"; };
 		34677C7522F21F82004A7B0F /* PlaceInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCell.swift; sourceTree = "<group>"; };
 		34677C7722F21F8F004A7B0F /* PlaceInfoCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCellProtocol.swift; sourceTree = "<group>"; };
-		34677C7A22F2276A004A7B0F /* StockListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCell.swift; sourceTree = "<group>"; };
-		34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListCellProtocol.swift; sourceTree = "<group>"; };
-		34677C8122F22932004A7B0F /* StockListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockListCell.xib; sourceTree = "<group>"; };
+		34677C7A22F2276A004A7B0F /* StockPlaceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlaceListCell.swift; sourceTree = "<group>"; };
+		34677C7C22F22785004A7B0F /* StockPlaceListCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPlaceListCellProtocol.swift; sourceTree = "<group>"; };
+		34677C8122F22932004A7B0F /* StockPlaceListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockPlaceListCell.xib; sourceTree = "<group>"; };
 		346A76E022F4CD2F0077D8FB /* DetailListCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailListCellProtocol.swift; sourceTree = "<group>"; };
 		346A76E122F4CD2F0077D8FB /* DetailsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsListCell.swift; sourceTree = "<group>"; };
 		346A76E522F4CD730077D8FB /* DetailsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsListCell.xib; sourceTree = "<group>"; };
-		346A76E722F577430077D8FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3480035B22F5DF02005BE5ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		348C400022EEE80800E1AE66 /* Stock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348C400322EEE80900E1AE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348C400822EEE80900E1AE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QrScanner.storyboard; sourceTree = "<group>"; };
@@ -403,7 +403,7 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		34677C4022F2121D004A7B0F /* StockList */ = {
+		34677C4022F2121D004A7B0F /* StockPlaceList */ = {
 			isa = PBXGroup;
 			children = (
 				34677C4722F21229004A7B0F /* Assembly */,
@@ -411,14 +411,14 @@
 				34677C4122F21229004A7B0F /* Presenter */,
 				34677C4422F21229004A7B0F /* View */,
 			);
-			path = StockList;
+			path = StockPlaceList;
 			sourceTree = "<group>";
 		};
 		34677C4122F21229004A7B0F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				34677C4222F21229004A7B0F /* StockListPresenter.swift */,
-				34677C4322F21229004A7B0F /* StockListPresenterProtocol.swift */,
+				34677C4222F21229004A7B0F /* StockPlaceListPresenter.swift */,
+				34677C4322F21229004A7B0F /* StockPlaceListPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -427,9 +427,9 @@
 			isa = PBXGroup;
 			children = (
 				34677C7922F22746004A7B0F /* StockViewerCell */,
-				34677C4522F21229004A7B0F /* StockListViewController.swift */,
-				34677C4622F21229004A7B0F /* StockListViewProtocol.swift */,
-				34677C6022F21485004A7B0F /* StockList.storyboard */,
+				34677C4522F21229004A7B0F /* StockPlaceListViewController.swift */,
+				34677C4622F21229004A7B0F /* StockPlaceListViewProtocol.swift */,
+				34677C6022F21485004A7B0F /* StockPlaceList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 		34677C4722F21229004A7B0F /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				34677C4822F21229004A7B0F /* StockListAssembly.swift */,
+				34677C4822F21229004A7B0F /* StockPlaceListAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -546,9 +546,9 @@
 		34677C7922F22746004A7B0F /* StockViewerCell */ = {
 			isa = PBXGroup;
 			children = (
-				34677C7A22F2276A004A7B0F /* StockListCell.swift */,
-				34677C7C22F22785004A7B0F /* StockListCellProtocol.swift */,
-				34677C8122F22932004A7B0F /* StockListCell.xib */,
+				34677C7A22F2276A004A7B0F /* StockPlaceListCell.swift */,
+				34677C7C22F22785004A7B0F /* StockPlaceListCellProtocol.swift */,
+				34677C8122F22932004A7B0F /* StockPlaceListCell.xib */,
 			);
 			path = StockViewerCell;
 			sourceTree = "<group>";
@@ -575,7 +575,6 @@
 		348C3FF722EEE80800E1AE66 = {
 			isa = PBXGroup;
 			children = (
-				346A76E722F577430077D8FB /* GoogleService-Info.plist */,
 				348C400222EEE80800E1AE66 /* Stock */,
 				348C400122EEE80800E1AE66 /* Products */,
 				B3FE0B3DD5654034DB90710E /* Pods */,
@@ -601,11 +600,12 @@
 				34480F7B22F57DE500C338A3 /* Authorization */,
 				34677BFD22F0A719004A7B0F /* QrScanner */,
 				34677C3122F20FCC004A7B0F /* DetailPlaceAproover */,
-				34677C4022F2121D004A7B0F /* StockList */,
+				34677C4022F2121D004A7B0F /* StockPlaceList */,
 				34677C4F22F2138A004A7B0F /* CommonInfoViewer */,
 				348C400A22EEE80B00E1AE66 /* Assets.xcassets */,
 				348C400C22EEE80B00E1AE66 /* LaunchScreen.storyboard */,
 				348C400F22EEE80B00E1AE66 /* Info.plist */,
+				3480035B22F5DF02005BE5ED /* GoogleService-Info.plist */,
 			);
 			path = Stock;
 			sourceTree = "<group>";
@@ -680,16 +680,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				34480F8922F5893F00C338A3 /* Login.storyboard in Resources */,
-				346A76E822F577440077D8FB /* GoogleService-Info.plist in Resources */,
 				348C400E22EEE80B00E1AE66 /* LaunchScreen.storyboard in Resources */,
+				3480035C22F5DF03005BE5ED /* GoogleService-Info.plist in Resources */,
 				348C400B22EEE80B00E1AE66 /* Assets.xcassets in Resources */,
-				34677C6122F21485004A7B0F /* StockList.storyboard in Resources */,
+				34677C6122F21485004A7B0F /* StockPlaceList.storyboard in Resources */,
 				34677C6822F2164F004A7B0F /* DetailInfoCell.xib in Resources */,
 				34677C6322F21494004A7B0F /* DetailsList.storyboard in Resources */,
 				34677C6622F2163E004A7B0F /* PlaceInfoCell.xib in Resources */,
 				34480FA322F597FF00C338A3 /* Register.storyboard in Resources */,
 				348C400922EEE80900E1AE66 /* QrScanner.storyboard in Resources */,
-				34677C8222F22932004A7B0F /* StockListCell.xib in Resources */,
+				34677C8222F22932004A7B0F /* StockPlaceListCell.xib in Resources */,
 				34677C5F22F21467004A7B0F /* DetailPlaceAproover.storyboard in Resources */,
 				34677C6A22F2166E004A7B0F /* AprooveCell.xib in Resources */,
 				346A76E622F4CD730077D8FB /* DetailsListCell.xib in Resources */,
@@ -753,22 +753,22 @@
 				34677C2622F0AA3B004A7B0F /* StockDetail.swift in Sources */,
 				34677C5B22F2139C004A7B0F /* DetailsListViewProtocol.swift in Sources */,
 				34677C2E22F0AA7D004A7B0F /* DataMock.swift in Sources */,
-				34677C4C22F2122A004A7B0F /* StockListViewController.swift in Sources */,
+				34677C4C22F2122A004A7B0F /* StockPlaceListViewController.swift in Sources */,
 				34677C1022F0A80A004A7B0F /* Application.swift in Sources */,
 				34480FA122F597FF00C338A3 /* RegisterPresenter.swift in Sources */,
 				34677C7622F21F82004A7B0F /* PlaceInfoCell.swift in Sources */,
 				34480F9422F58BE700C338A3 /* LoginPresenter.swift in Sources */,
-				34677C4B22F2122A004A7B0F /* StockListPresenterProtocol.swift in Sources */,
+				34677C4B22F2122A004A7B0F /* StockPlaceListPresenterProtocol.swift in Sources */,
 				34677C3F22F20FF3004A7B0F /* DetailPlaceAprooverPresenterProtocol.swift in Sources */,
-				34677C4A22F2122A004A7B0F /* StockListPresenter.swift in Sources */,
+				34677C4A22F2122A004A7B0F /* StockPlaceListPresenter.swift in Sources */,
 				34677C5A22F2139C004A7B0F /* DetailsListViewController.swift in Sources */,
 				34480F8F22F58BCE00C338A3 /* LoginViewController.swift in Sources */,
 				34677C1422F0A81C004A7B0F /* ControllerBuilder.swift in Sources */,
 				346A76E322F4CD2F0077D8FB /* DetailsListCell.swift in Sources */,
 				34677C3E22F20FF3004A7B0F /* DetailPlaceAprooverPresenter.swift in Sources */,
 				34480FA022F597FF00C338A3 /* RegisterPresenterProtocol.swift in Sources */,
-				34677C7D22F22785004A7B0F /* StockListCellProtocol.swift in Sources */,
-				34677C7B22F2276A004A7B0F /* StockListCell.swift in Sources */,
+				34677C7D22F22785004A7B0F /* StockPlaceListCellProtocol.swift in Sources */,
+				34677C7B22F2276A004A7B0F /* StockPlaceListCell.swift in Sources */,
 				34677C0822F0A7F1004A7B0F /* UIViewControllerStoryboardID.swift in Sources */,
 				34677C7222F21BA9004A7B0F /* DetailInfoCell.swift in Sources */,
 				34677C5922F2139C004A7B0F /* DetailsListAssembly.swift in Sources */,
@@ -778,7 +778,7 @@
 				34677C2422F0AA1A004A7B0F /* DataProviderSingleReaderProtocol.swift in Sources */,
 				34677C0E22F0A7FB004A7B0F /* CoordinatorProtocol.swift in Sources */,
 				34677C3D22F20FF3004A7B0F /* DetailPlaceAprooverAssembly.swift in Sources */,
-				34677C4E22F2122A004A7B0F /* StockListAssembly.swift in Sources */,
+				34677C4E22F2122A004A7B0F /* StockPlaceListAssembly.swift in Sources */,
 				34677C7822F21F8F004A7B0F /* PlaceInfoCellProtocol.swift in Sources */,
 				34677C0722F0A7F1004A7B0F /* ErrorList.swift in Sources */,
 				34480FA522F597FF00C338A3 /* RegisterViewProtocol.swift in Sources */,
@@ -790,7 +790,7 @@
 				34677C1522F0A81C004A7B0F /* ControllerBuilderProtocol.swift in Sources */,
 				34677C3B22F20FF3004A7B0F /* DetailPlaceAprooverViewProtocol.swift in Sources */,
 				34677C2822F0AA4A004A7B0F /* StockDetailProcol.swift in Sources */,
-				34677C4D22F2122A004A7B0F /* StockListViewProtocol.swift in Sources */,
+				34677C4D22F2122A004A7B0F /* StockPlaceListViewProtocol.swift in Sources */,
 				346A76E222F4CD2F0077D8FB /* DetailListCellProtocol.swift in Sources */,
 				34677C7422F21BB4004A7B0F /* DetailInfoCellProtocol.swift in Sources */,
 				34480F9022F58BCE00C338A3 /* LoginViewProtocol.swift in Sources */,

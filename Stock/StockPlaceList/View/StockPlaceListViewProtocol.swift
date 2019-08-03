@@ -1,5 +1,5 @@
 //
-//  StockListViewProtocol.swift
+//  StockPlaceListViewProtocol.swift
 //  Stock
 //
 //  Created by Артур on 31/07/2019.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol StockListViewInputProtocol: class {
-  var output: StockListViewOutputProtocol {get set}
+protocol StockPlaceListViewInputProtocol: class {
+  var output: StockPlaceListViewOutputProtocol {get set}
   func showStock(list: [StockPlaceProtocol])
 }
-protocol StockListViewOutputProtocol: class {
+protocol StockPlaceListViewOutputProtocol: class {
   func viewWillAppear()
   func selected(stock: StockPlaceProtocol)
 }

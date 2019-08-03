@@ -67,17 +67,20 @@ extension QrScannerPresenter: QrScannerViewOutputProtocol {
       case .scanningDetail:
         currentState = .paused
         DispatchQueue.global(qos: .background).async {
-          sleep(3)
-          guard let detail = self.dataProvider.getDetail(by: code) else {
-            DispatchQueue.main.async {
-              self.presenterOutput.showAlert(text: "Деталь не найдена")
-              self.previousState = .scanningDetail
+          sleep(2)
+          self.dataProvider.getDetail(by: code) { result in
+            guard let detail = result.success else {
+              DispatchQueue.main.async {
+                if let error = result.error { self.presenterOutput.showAlert(text: error.localizedDescription)}
+                else { self.presenterOutput.showAlert(text: "Деталь не найдена") }
+                self.previousState = .scanningDetail
+              }
+              return
             }
-            return
-          }
-          DispatchQueue.main.async {
-            self.currentDetail = detail
-            self.currentState = .scanningPlace
+            DispatchQueue.main.async {
+              self.currentDetail = detail
+              self.currentState = .scanningPlace
+            }
           }
         }
         
