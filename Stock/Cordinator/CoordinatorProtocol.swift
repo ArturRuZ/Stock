@@ -9,5 +9,5 @@
 import UIKit
 
 protocol CoordinatorProtocol: class {
-  func getRootController() -> UIViewController
+  func getControllerForLouncApp() -> UIViewController
 }

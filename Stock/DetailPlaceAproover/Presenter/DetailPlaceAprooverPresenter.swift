@@ -28,10 +28,10 @@ final class  DetailPlaceAprooverPresenter {
 // MARK: - DetailPlaceAprooverViewOutputProtocol Implementation
 
 extension DetailPlaceAprooverPresenter: DetailPlaceAprooverViewOutputProtocol {
-  func cancelCellPressed() {
+  func cancelButtonPressed() {
     delegate.showQrscanner()
   }
-  func aprooveCellPressed() {
+  func aprooveButtonPressed() {
     guard let detail = currentDetail, let place = currentPlace else { return }
     dataProvider.save(detail: detail, place: place)
     delegate.showQrscanner()
@@ -52,7 +52,6 @@ extension DetailPlaceAprooverPresenter: DetailPlaceAprooverPresenterInputProtoco
       self.presenterDelegate = newValue
     }
   }
-  
   var output: DetailPlaceAprooverViewInputProtocol {
     get {
       return self.presenterOutput

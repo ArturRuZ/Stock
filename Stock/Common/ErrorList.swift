@@ -9,5 +9,17 @@
 import Foundation
 
 enum ErrorsList: Error {
+ case detailNotFound
+ case StockPlaceNotFound
+}
 
+extension ErrorsList: LocalizedError {
+  public var errorDescription: String? {
+    switch self {
+    case .detailNotFound:
+      return NSLocalizedString("Деталь не найдена", comment: "")
+    case .StockPlaceNotFound:
+      return NSLocalizedString("Место не найдено", comment: "")
+    }
+  }
 }

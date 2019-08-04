@@ -14,11 +14,9 @@ final class Coordinator {
   
   private let controllerBuilder: ControllerBuilderProtocol
   private lazy var navigationController: UINavigationController = {
-    let navigationController = UINavigationController()
-//    let rootController = self.controllerBuilder.buildRootController()
-      navigationController.navigationBar.isHidden = true
-//    navigationController.pushViewController(rootController, animated: true)
-    return navigationController
+    let navigationRootController = UINavigationController()
+      navigationRootController.navigationBar.isHidden = true
+    return navigationRootController
     }()
   private lazy var rootController = controllerBuilder.buildRootController()
   
@@ -32,7 +30,7 @@ final class Coordinator {
 // MARK: - CoordinatorProtocol implementation
 
 extension Coordinator: CoordinatorProtocol {
-  func getRootController() -> UIViewController {
+  func getControllerForLouncApp() -> UIViewController {
     let loginController = controllerBuilder.buildLoginController()
     navigationController.pushViewController(loginController, animated: true)
     return navigationController
@@ -58,10 +56,18 @@ extension Coordinator: DetailPlaceAprooverPresenterDelegateProtocol {
 
 // MARK: - StockPlaceListPresenterDelegateProtocol implementation
 
-extension Coordinator: StockPlaceListPresenterDelegateProtocol {
-  func showDetailsList(for stock: StockPlaceProtocol) {
+extension Coordinator: StockListPresenterDelegateProtocol {
+  func showDetailsList(for stock: StockProtocol) {
     let detailListController = controllerBuilder.buildDetailsListController(for: stock)
-    navigationController.pushViewController(detailListController, animated: true)
+    guard let tabBarController = rootController as? UITabBarController else {
+      self.navigationController.pushViewController(detailListController, animated: true)
+      return
+    }
+    if let navigation = tabBarController.viewControllers?[1] as? UINavigationController {
+      navigation.pushViewController(detailListController, animated: true)
+    } else {
+      self.navigationController.pushViewController(detailListController, animated: true)
+    }
   }
 }
 
@@ -79,7 +85,6 @@ extension Coordinator: LoginPresenterDelegateProtocol {
   }
   func showRegisterController() {
     let registerController = controllerBuilder.buildRegisterController()
-    print (navigationController.viewControllers)
     navigationController.pushViewController(registerController, animated: true)
   }
 }
@@ -87,5 +92,4 @@ extension Coordinator: LoginPresenterDelegateProtocol {
 // MARK: - LoginPresenterDelegateProtocol implementation
 
 extension Coordinator: RegisterPresenterDelegateProtocol {
- 
 }

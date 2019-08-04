@@ -14,7 +14,13 @@ final class DetailPlaceAprooverViewController: UIViewController {
   // MARK: - Outlets
   
   @IBOutlet weak var infoTableView: UITableView!
-  @IBOutlet weak var aprooveTableView: UITableView!
+
+  @IBAction func aprooveButton(_ sender: UIButton) {
+    viewOutput.aprooveButtonPressed()
+  }
+  @IBAction func cancelButton(_ sender: Any) {
+    viewOutput.cancelButtonPressed()
+  }
   
   // MARK: - Properties
   
@@ -35,12 +41,7 @@ final class DetailPlaceAprooverViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupInfoTableView()
-    setupAprooveTableView()
     viewOutput.viewDidLoad()
-  }
-  
-  deinit {
-    print ("DEINIT")
   }
   
   // MARK: - Private methods
@@ -55,17 +56,6 @@ final class DetailPlaceAprooverViewController: UIViewController {
     infoTableView.isScrollEnabled = false
     infoTableView.allowsSelection = false
     infoTableView.tableFooterView =  UIView(frame: CGRect.zero)
-  
-  }
-  private func setupAprooveTableView() {
-    aprooveTableView.register(kAprooveCellNib, forCellReuseIdentifier: kAprooveCellIdentifier)
-    aprooveTableView.register(kCancelCellNib, forCellReuseIdentifier: kCancelCellIdentifier)
-    aprooveTableView.rowHeight = UITableView.automaticDimension
-    aprooveTableView.estimatedRowHeight = 40
-    aprooveTableView.dataSource = self
-    aprooveTableView.delegate = self
-    aprooveTableView.isScrollEnabled = false
-    aprooveTableView.tableFooterView =  UIView(frame: CGRect.zero)
   }
 }
 
@@ -93,14 +83,6 @@ extension DetailPlaceAprooverViewController: DetailPlaceAprooverViewInputProtoco
 extension DetailPlaceAprooverViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    switch indexPath.row {
-    case 0:
-      viewOutput.aprooveCellPressed()
-    case 1:
-      viewOutput.cancelCellPressed()
-    default:
-      break
-    }
   }
 }
 
@@ -113,12 +95,6 @@ extension DetailPlaceAprooverViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch tableView {
       
-      // MARK: - Confegure aprooveTableView:
-      
-    case aprooveTableView:
-      if indexPath.row == 0 { return aprooveTableView.dequeueReusableCell(withIdentifier: kAprooveCellIdentifier, for: indexPath) }
-      if indexPath.row == 1 { return aprooveTableView.dequeueReusableCell(withIdentifier: kCancelCellIdentifier, for: indexPath) }
-   
      // MARK: - Confegure infoTableView:
     
     case infoTableView:
@@ -144,4 +120,3 @@ extension DetailPlaceAprooverViewController: UITableViewDataSource {
     return UITableViewCell()
   }
 }
-

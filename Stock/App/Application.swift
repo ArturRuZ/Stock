@@ -22,6 +22,6 @@ final class Application {
   // MARK: - BuildIn Methods
   
   func rootViewController() -> UIViewController {
-    return self.coordinator.getRootController()
+    return self.coordinator.getControllerForLouncApp()
   }
 }

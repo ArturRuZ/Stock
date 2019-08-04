@@ -10,15 +10,15 @@ import Foundation
 
 protocol DataProviderSingleReaderProtocol: class {
   func getDetail(by id: String, complition: @escaping (Result<StockDetailProtocol>) -> Void)
-  func getStockPlace(by id: String) -> StockPlaceProtocol?
+  func getStockPlace(by id: String, complition: @escaping (Result<StockPlaceProtocol>) -> Void)
 }
 
 protocol DataProviderstockListReaderProtocol: class {
-  func getstockList() -> [StockPlaceProtocol]
+  func getstockList(complition: @escaping (Result<[StockProtocol]>) -> Void)
 }
 
 protocol DataProviderDetailsListReaderProtocol: class {
-  func getDetails(for stockPlaceId: String) -> [StockDetailProtocol]
+  func getDetails(for stockTitle: String, complition: @escaping (Result<[StockDetailProtocol]>) -> Void)
 }
 
 protocol DataProviderSaverProtocol: class {

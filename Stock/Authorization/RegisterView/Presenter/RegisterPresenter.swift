@@ -48,7 +48,6 @@ extension RegisterPresenter: RegisterPresenterInputProtocol {
       self.presenterDelegate = newValue
     }
   }
-  
   var output: RegisterViewInputProtocol {
     get {
       return self.presenterOutput
@@ -57,6 +56,4 @@ extension RegisterPresenter: RegisterPresenterInputProtocol {
       self.presenterOutput = newValue
     }
   }
-  
-
 }

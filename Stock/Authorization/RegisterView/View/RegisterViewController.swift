@@ -15,13 +15,15 @@ final class RegisterViewController: UIViewController {
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBAction func RegisterButton(_ sender: UIButton) {
-  viewOutput.registerButtonPressed(email: emailTextField.text, password: passwordTextField.text)
+    viewOutput.registerButtonPressed(email: emailTextField.text, password: passwordTextField.text)
+    passwordTextField.resignFirstResponder()
+    emailTextField.resignFirstResponder()
   }
   
   // MARK: - Properties
   
   private var viewOutput: RegisterViewOutputProtocol!
- 
+  
   // MARK: - BuildInMethods
   
   override func viewDidLoad() {
@@ -29,6 +31,7 @@ final class RegisterViewController: UIViewController {
     self.navigationController?.navigationBar.isHidden = false
     self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem.init(
       title: "Назад", style: .plain, target: nil, action: nil)
+    self.hideKeyboardWhenTappedAround() 
   }
 }
 
@@ -45,7 +48,7 @@ extension RegisterViewController: RegisterViewInputProtocol {
   }
   func showAlert(text: String) {
     let failedConfegure = UIAlertController(title: "Ошибка", message: "\(text)",
-                                            preferredStyle: .alert)
+      preferredStyle: .alert)
     failedConfegure.addAction(UIAlertAction(title: "ОК", style: .default))
     present(failedConfegure, animated: true)
   }

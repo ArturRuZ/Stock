@@ -14,6 +14,6 @@ protocol DetailPlaceAprooverViewInputProtocol: class {
 }
 protocol DetailPlaceAprooverViewOutputProtocol: class {
   func viewDidLoad()
-  func cancelCellPressed()
-  func aprooveCellPressed()
+  func cancelButtonPressed()
+  func aprooveButtonPressed()
 }

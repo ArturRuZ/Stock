@@ -13,11 +13,10 @@ struct StockDetail: StockDetailProtocol {
   var type: String
   var size: [Int]
   var date: String
-
 }
 
 extension StockDetail: DetailInfoCellProtocol {
 }
 extension StockDetail: DetailListCellProtocol {
-  
 }
+

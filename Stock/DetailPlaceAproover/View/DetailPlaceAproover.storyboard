@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Place Aproover View Controller-->
+        <scene sceneID="liM-j4-hO5">
+            <objects>
+                <viewController storyboardIdentifier="DetailPlaceAprooverViewController" id="SIu-5L-rrt" customClass="DetailPlaceAprooverViewController" customModule="Stock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ae-zR-fCu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-x6-zAu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="638"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLh-7Z-3SL">
+                                <rect key="frame" x="0.0" y="682" width="414" height="214"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.59883347602739723" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULq-Et-VEq">
+                                <rect key="frame" x="20" y="722" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Подтвердить">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="aprooveButton:" destination="SIu-5L-rrt" eventType="touchUpInside" id="I1h-dx-YKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO2-Vi-AaM">
+                                <rect key="frame" x="20" y="772" width="374" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.20964045789999999" blue="0.094679072619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Отмена">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="SIu-5L-rrt" eventType="touchUpInside" id="sAD-gK-JXd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="bottom" secondItem="mO2-Vi-AaM" secondAttribute="bottom" constant="60" id="1BW-EB-XrU"/>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="q7s-x6-zAu" secondAttribute="trailing" id="1ym-o2-FSh"/>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="JLh-7Z-3SL" secondAttribute="trailing" id="6fz-yH-fwn"/>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="mO2-Vi-AaM" secondAttribute="trailing" constant="20" id="FX8-nY-Eq3"/>
+                            <constraint firstItem="ULq-Et-VEq" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" constant="20" id="GUi-kd-Ujs"/>
+                            <constraint firstItem="mO2-Vi-AaM" firstAttribute="centerX" secondItem="5Ae-zR-fCu" secondAttribute="centerX" id="OnD-eM-7kP"/>
+                            <constraint firstItem="q7s-x6-zAu" firstAttribute="top" secondItem="DOf-rc-4f2" secondAttribute="top" id="TGd-5z-uOl"/>
+                            <constraint firstItem="DOf-rc-4f2" firstAttribute="trailing" secondItem="ULq-Et-VEq" secondAttribute="trailing" constant="20" id="ZLs-f7-9jC"/>
+                            <constraint firstItem="ULq-Et-VEq" firstAttribute="centerX" secondItem="5Ae-zR-fCu" secondAttribute="centerX" id="bbd-LH-FpI"/>
+                            <constraint firstItem="mO2-Vi-AaM" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" constant="20" id="d3g-UJ-UXc"/>
+                            <constraint firstItem="JLh-7Z-3SL" firstAttribute="top" secondItem="q7s-x6-zAu" secondAttribute="bottom" id="fo9-qW-Fjb"/>
+                            <constraint firstItem="JLh-7Z-3SL" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" id="hJA-xH-d3v"/>
+                            <constraint firstItem="q7s-x6-zAu" firstAttribute="leading" secondItem="DOf-rc-4f2" secondAttribute="leading" id="mqJ-ts-FbV"/>
+                            <constraint firstItem="mO2-Vi-AaM" firstAttribute="top" secondItem="ULq-Et-VEq" secondAttribute="bottom" constant="20" id="nsH-RA-HRX"/>
+                            <constraint firstAttribute="bottom" secondItem="JLh-7Z-3SL" secondAttribute="bottom" id="t61-ns-wLb"/>
+                            <constraint firstItem="ULq-Et-VEq" firstAttribute="top" secondItem="q7s-x6-zAu" secondAttribute="bottom" constant="40" id="tL2-Yl-Zjr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DOf-rc-4f2"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoTableView" destination="q7s-x6-zAu" id="4Jg-vE-ybc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1Z-0A-MFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="139"/>
+        </scene>
+    </scenes>
+</document>

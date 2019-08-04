@@ -60,6 +60,4 @@ extension LoginPresenter: LoginPresenterInputProtocol {
       self.presenterOutput = newValue
     }
   }
-  
-
 }

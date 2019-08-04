@@ -67,12 +67,13 @@ extension QrScannerPresenter: QrScannerViewOutputProtocol {
       case .scanningDetail:
         currentState = .paused
         DispatchQueue.global(qos: .background).async {
-          sleep(2)
+          sleep(3)
           self.dataProvider.getDetail(by: code) { result in
             guard let detail = result.success else {
               DispatchQueue.main.async {
-                if let error = result.error { self.presenterOutput.showAlert(text: error.localizedDescription)}
-                else { self.presenterOutput.showAlert(text: "Деталь не найдена") }
+                if let error = result.error {
+                self.presenterOutput.showAlert(text: error.localizedDescription)
+                }
                 self.previousState = .scanningDetail
               }
               return
@@ -89,24 +90,30 @@ extension QrScannerPresenter: QrScannerViewOutputProtocol {
       case .scanningPlace:
         currentState = .paused
         DispatchQueue.global(qos: .background).async {
-          guard let place = self.dataProvider.getStockPlace(by: code) else {
-            DispatchQueue.main.async {
-              self.presenterOutput.showAlert(text: "Место не найдено")
-              self.previousState = .scanningPlace
+          self.dataProvider.getStockPlace(by: code) { result in
+            guard let stockPlace = result.success else {
+              DispatchQueue.main.async {
+                if let error = result.error {
+                self.presenterOutput.showAlert(text: error.localizedDescription)
+                }
+                self.previousState = .scanningPlace
+              }
+              return
             }
-            return
-          }
-          DispatchQueue.main.async {
-            guard let detail = self.currentDetail else { return }
-            self.delegate.showDetailPlaceAproover(detail: detail, place: place)
-            self.currentState = .scanningDetail
+            DispatchQueue.main.async {
+              guard let detail = self.currentDetail else {
+                 self.presenterOutput.showAlert(text: "Произошла ошибка обработки данных")
+                return
+              }
+              self.delegate.showDetailPlaceAproover(detail: detail, place: stockPlace)
+              self.currentState = .scanningDetail
+            }
           }
         }
       }
     }
   }
 }
-
 
 extension QrScannerPresenter: QrScannerPresenterInputProtocol {
   var delegate: QrScannerPresenterDelegateProtocol {

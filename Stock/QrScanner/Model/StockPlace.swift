@@ -17,5 +17,3 @@ struct StockPlace: StockPlaceProtocol  {
 
 extension StockPlace: PlaceInfoCellProtocol {
 }
-extension StockPlace: StockPlaceListCellProtocol {
-}

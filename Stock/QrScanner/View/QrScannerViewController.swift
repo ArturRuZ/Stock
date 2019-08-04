@@ -36,13 +36,11 @@ final class QrScannerViewController: UIViewController {
     super.viewWillAppear(animated)
     sessionQueue.async {
       self.captureSession?.startRunning()
-      print ("wieWillAppear")
     }
   }
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
    captureSession?.stopRunning()
-     print ("Disappear")
   }
   override var prefersStatusBarHidden: Bool {
     return true
