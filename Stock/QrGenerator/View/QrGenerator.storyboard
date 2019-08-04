@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Qr Generator View Controller-->
+        <scene sceneID="KR9-eW-NgR">
+            <objects>
+                <viewController storyboardIdentifier="QrGeneratorViewController" id="baU-nr-nad" customClass="QrGeneratorViewController" customModule="Stock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYb-2p-y1c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnT-PH-Tzk">
+                                <rect key="frame" x="0.0" y="348" width="414" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC4-ow-99y">
+                                        <rect key="frame" x="16" y="154" width="382" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Сгенерировать">
+                                            <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="generateButton:" destination="baU-nr-nad" eventType="touchUpInside" id="Nc3-PG-UoI"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-go-33g">
+                                        <rect key="frame" x="16" y="64" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7yO-Te-vrq"/>
+                                    <constraint firstItem="ZC4-ow-99y" firstAttribute="leading" secondItem="XnT-PH-Tzk" secondAttribute="leading" constant="16" id="AIA-7j-DqK"/>
+                                    <constraint firstItem="ZVb-go-33g" firstAttribute="leading" secondItem="XnT-PH-Tzk" secondAttribute="leading" constant="16" id="V7g-Fn-Qb5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZVb-go-33g" secondAttribute="trailing" constant="16" id="fgj-s5-RUR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZC4-ow-99y" secondAttribute="trailing" constant="16" id="ln6-JJ-F5s"/>
+                                    <constraint firstItem="ZC4-ow-99y" firstAttribute="top" secondItem="ZVb-go-33g" secondAttribute="bottom" constant="60" id="sTb-LE-wps"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZC4-ow-99y" secondAttribute="bottom" constant="16" id="vJE-bN-eNY"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7nj-IK-qOe">
+                                <rect key="frame" x="157" y="218" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CHk-kY-Tqm"/>
+                                    <constraint firstAttribute="width" constant="100" id="chI-A2-6AT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XnT-PH-Tzk" firstAttribute="centerX" secondItem="PYb-2p-y1c" secondAttribute="centerX" id="29O-El-DjP"/>
+                            <constraint firstItem="XnT-PH-Tzk" firstAttribute="top" secondItem="7nj-IK-qOe" secondAttribute="bottom" constant="30" id="CNR-hN-cSY"/>
+                            <constraint firstItem="7nj-IK-qOe" firstAttribute="centerX" secondItem="PYb-2p-y1c" secondAttribute="centerX" id="YYP-93-sEP"/>
+                            <constraint firstItem="XnT-PH-Tzk" firstAttribute="centerY" secondItem="PYb-2p-y1c" secondAttribute="centerY" id="YpR-Pz-bdq"/>
+                            <constraint firstItem="XnT-PH-Tzk" firstAttribute="trailing" secondItem="3is-XS-U2D" secondAttribute="trailing" id="edZ-RO-GL0"/>
+                            <constraint firstItem="XnT-PH-Tzk" firstAttribute="leading" secondItem="3is-XS-U2D" secondAttribute="leading" id="fQc-Ec-srx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3is-XS-U2D"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImage" destination="7nj-IK-qOe" id="gyd-Yq-Wlr"/>
+                        <outlet property="textFieldForQr" destination="ZVb-go-33g" id="3gD-8B-iua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zx-TG-849" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="113"/>
+        </scene>
+    </scenes>
+</document>
